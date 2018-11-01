@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<Bestellung>
+		<Bestelldatum>2014-10-12</Bestelldatum>
+		<Artikelnummer>30</Artikelnummer>
+		<Lieferantennummer>65</Lieferantennummer>
+		<Menge>1</Menge>
+		<Artikelbezeichnung>Laderampe BCL 2000                                             </Artikelbezeichnung>
+		<Lieferantenname>Witzenmann</Lieferantenname>
+		<Einzelpreis>6000</Einzelpreis>
+		<Nettopreis>6000</Nettopreis>
+		<MwSt>1140</MwSt>
+		<Gesamtpreis>7140</Gesamtpreis>
+	</Bestellung>
+	<Bestellung>
+		<Bestelldatum>2010-05-03</Bestelldatum>
+		<Artikelnummer>60</Artikelnummer>
+		<Lieferantennummer>65</Lieferantennummer>
+		<Menge>2</Menge>
+		<Artikelbezeichnung>Hubzylinder                                                    </Artikelbezeichnung>
+		<Lieferantenname>Witzenmann</Lieferantenname>
+		<Einzelpreis>1250</Einzelpreis>
+		<Nettopreis>2500</Nettopreis>
+		<MwSt>475</MwSt>
+		<Gesamtpreis>2975</Gesamtpreis>
+	</Bestellung>
+	<Bestellung>
+		<Bestelldatum>2017-08-06</Bestelldatum>
+		<Artikelnummer>90</Artikelnummer>
+		<Lieferantennummer>9</Lieferantennummer>
+		<Menge>200</Menge>
+		<Artikelbezeichnung>Hydraulik-Öl                                                   </Artikelbezeichnung>
+		<Lieferantenname>Kleiner</Lieferantenname>
+		<Einzelpreis>12.5</Einzelpreis>
+		<Nettopreis>2500</Nettopreis>
+		<MwSt>475</MwSt>
+		<Gesamtpreis>2975</Gesamtpreis>
+	</Bestellung>
+	<Bestellung>
+		<Bestelldatum>2017-11-11</Bestelldatum>
+		<Artikelnummer>120</Artikelnummer>
+		<Lieferantennummer>252</Lieferantennummer>
+		<Menge>5</Menge>
+		<Artikelbezeichnung>Schlauch                                                       </Artikelbezeichnung>
+		<Lieferantenname>Walch</Lieferantenname>
+		<Einzelpreis>7.5</Einzelpreis>
+		<Nettopreis>37.5</Nettopreis>
+		<MwSt>7.125</MwSt>
+		<Gesamtpreis>44.625</Gesamtpreis>
+	</Bestellung>
+	<Bestellung>
+		<Bestelldatum>2000-12-15</Bestelldatum>
+		<Artikelnummer>150</Artikelnummer>
+		<Lieferantennummer>3256</Lieferantennummer>
+		<Menge>20</Menge>
+		<Artikelbezeichnung>Büschelstecker                                                 </Artikelbezeichnung>
+		<Lieferantenname>Bosch</Lieferantenname>
+		<Einzelpreis>4.45</Einzelpreis>
+		<Nettopreis>89</Nettopreis>
+		<MwSt>16.91</MwSt>
+		<Gesamtpreis>105.91</Gesamtpreis>
+	</Bestellung>
+	<Bestellung>
+		<Bestelldatum>2014-07-18</Bestelldatum>
+		<Artikelnummer>180</Artikelnummer>
+		<Lieferantennummer>32</Lieferantennummer>
+		<Menge>5</Menge>
+		<Artikelbezeichnung>Dienstleistung                                                 </Artikelbezeichnung>
+		<Lieferantenname>Herta</Lieferantenname>
+		<Einzelpreis>2500</Einzelpreis>
+		<Nettopreis>12500</Nettopreis>
+		<MwSt>2375</MwSt>
+		<Gesamtpreis>14875</Gesamtpreis>
+	</Bestellung>
+	<Bestellung>
+		<Bestelldatum>1995-07-06</Bestelldatum>
+		<Artikelnummer>210</Artikelnummer>
+		<Lieferantennummer>32</Lieferantennummer>
+		<Menge>60</Menge>
+		<Artikelbezeichnung>Aderendhülse                                                   </Artikelbezeichnung>
+		<Lieferantenname>Herta</Lieferantenname>
+		<Einzelpreis>4.45</Einzelpreis>
+		<Nettopreis>267</Nettopreis>
+		<MwSt>50.73</MwSt>
+		<Gesamtpreis>317.73</Gesamtpreis>
+	</Bestellung>
+	<Bestellung>
+		<Bestelldatum>2013-06-17</Bestelldatum>
+		<Artikelnummer>240</Artikelnummer>
+		<Lieferantennummer>65</Lieferantennummer>
+		<Menge>200</Menge>
+		<Artikelbezeichnung>Federkontaktstift                                              </Artikelbezeichnung>
+		<Lieferantenname>Witzenmann</Lieferantenname>
+		<Einzelpreis>4.45</Einzelpreis>
+		<Nettopreis>890</Nettopreis>
+		<MwSt>169.1</MwSt>
+		<Gesamtpreis>1059.1</Gesamtpreis>
+	</Bestellung>
+	<Bestellung>
+		<Bestelldatum>2011-01-02</Bestelldatum>
+		<Artikelnummer>270</Artikelnummer>
+		<Lieferantennummer>1478</Lieferantennummer>
+		<Menge>25</Menge>
+		<Artikelbezeichnung>Dichtung R130A                                                 </Artikelbezeichnung>
+		<Lieferantenname>Audi</Lieferantenname>
+		<Einzelpreis>75.01</Einzelpreis>
+		<Nettopreis>1875.25</Nettopreis>
+		<MwSt>356.2975</MwSt>
+		<Gesamtpreis>2231.5475</Gesamtpreis>
+	</Bestellung>
+	<Bestellung>
+		<Bestelldatum>2009-09-25</Bestelldatum>
+		<Artikelnummer>300</Artikelnummer>
+		<Lieferantennummer>785</Lieferantennummer>
+		<Menge>1000</Menge>
+		<Artikelbezeichnung>Stift M6x12                                                    </Artikelbezeichnung>
+		<Lieferantenname>Daimler</Lieferantenname>
+		<Einzelpreis>4.45</Einzelpreis>
+		<Nettopreis>4450</Nettopreis>
+		<MwSt>845.5</MwSt>
+		<Gesamtpreis>5295.5</Gesamtpreis>
+	</Bestellung>
+	<Bestellung>
+		<Bestelldatum>2009-01-25</Bestelldatum>
+		<Artikelnummer>330</Artikelnummer>
+		<Lieferantennummer>3256</Lieferantennummer>
+		<Menge>5</Menge>
+		<Artikelbezeichnung>HSP-Kabel                                                      </Artikelbezeichnung>
+		<Lieferantenname>Bosch</Lieferantenname>
+		<Einzelpreis>15.02</Einzelpreis>
+		<Nettopreis>75.1</Nettopreis>
+		<MwSt>14.269</MwSt>
+		<Gesamtpreis>89.369</Gesamtpreis>
+	</Bestellung>
+	<Bestellung>
+		<Bestelldatum>2017-03-23</Bestelldatum>
+		<Artikelnummer>360</Artikelnummer>
+		<Lieferantennummer>456</Lieferantennummer>
+		<Menge>7</Menge>
+		<Artikelbezeichnung>Hochspannungsstecker                                           </Artikelbezeichnung>
+		<Lieferantenname>Schraubenhubert</Lieferantenname>
+		<Einzelpreis>4.45</Einzelpreis>
+		<Nettopreis>31.15</Nettopreis>
+		<MwSt>5.9185</MwSt>
+		<Gesamtpreis>37.0685</Gesamtpreis>
+	</Bestellung>
+</root>

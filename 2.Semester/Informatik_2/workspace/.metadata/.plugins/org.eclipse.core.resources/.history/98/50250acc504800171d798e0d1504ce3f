@@ -1,0 +1,15 @@
+package aufgabe.neun;
+
+public class ZustandsautomatTabelle {
+  
+  public static final int z0 = 0;
+  public static final int z1 = 1;
+  public static final int z2 = 2;
+  public static final int z3 = 3;
+  public static final int z4 = 4;
+  
+  int [][][] zustandsUebergangsTabelle = new int[2][5][5] = { { { 
+
+  
+  
+}

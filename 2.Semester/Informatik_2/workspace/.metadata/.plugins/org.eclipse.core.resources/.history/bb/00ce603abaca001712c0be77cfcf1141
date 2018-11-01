@@ -1,0 +1,53 @@
+package HA1;
+import java.io.*;
+import java.net.*;
+
+public class HTTPClient {
+  public static void main(String[] args) throws IOException {
+ 
+    while(true) {
+      // URL vom Benutzer erfragen
+      System.out.println("Type URL: ");
+      BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
+      String input = stdIn.readLine();
+      
+      // Falls keine URL eingegeben, Client beenden
+      if(input == "") {
+        System.exit(1);
+      }
+      
+      URL url = new URL("https://" + input);
+      
+      // Socket öffnen
+      try {
+        Socket httpSocket = new Socket(url.getHost(), url.getPort());
+        PrintWriter pw = new PrintWriter(httpSocket.getOutputStream());
+        BufferedReader in = new BufferedReader(new InputStreamReader(httpSocket.getInputStream()));
+        pw.println("GET /index.html HTTP/1.0");
+        
+        pw.println(""); // HTTP request endet mit leerer Zeile
+        pw.flush();
+        
+        String output;
+        while((output = in.readLine()) != null) {
+          System.out.println(output);
+        }
+        in.close();
+        pw.close();
+        
+        // Socket schließen
+        httpSocket.close();
+
+      } catch(UnknownHostException e) {
+         System.err.println("Don't know about host " + url.getHost());
+         continue;
+      } catch(IOException e) {
+         System.err.println("Couldn't get I/O for the connection to " + url.getHost());
+         continue;
+      }
+      
+    }
+
+  }
+  
+}

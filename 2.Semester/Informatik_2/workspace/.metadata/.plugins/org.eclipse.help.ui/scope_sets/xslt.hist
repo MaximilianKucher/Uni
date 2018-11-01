@@ -1,0 +1,4 @@
+#Mon Jan 22 13:54:31 CET 2018
+__DEFAULT__=false
+org.eclipse.help.ui.localSearch.master=true
+expression=xslt

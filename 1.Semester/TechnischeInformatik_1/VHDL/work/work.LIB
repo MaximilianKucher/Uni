@@ -1,0 +1,105 @@
+timestamp=1478521201814
+
+[and4]
+A/only=A/Only 21|./../parity.vhd|20|1*669
+BinI32/only=3*260
+I=0*925
+I/only=I/Only 0*1174
+M=11|0|v98|1478521201081|./../parity.vhd|0*716*0x21bd7ec21e2d6039a1ef0d404580ae6034bccc88|0*855*0xab32bc1a2daf049573e14469f634e0e6
+M/only=M/Only 21|0|v98|1478521201083|./../parity.vhd|0*958*0xea18baa5af016d261c03d9d9bc1cdafeb6fc186c|0*1096*0xb33770ff1c10522f9491560174ac8e6c
+R=./../parity.vhd|15
+Version=9.1.2353.4205  (Windows)|00000003789cd3f5370600015b00b0
+Version/only=9.1.2353.4205  (Windows)|00000003789cd3f5370600015b00b0
+
+[and8]
+A/only=A/Only 21|./../parity.vhd|30|1*1558
+BinI32/only=3*570
+I=0*1641
+I/only=I/Only 0*1911
+M=11|0|v98|1478521201096|./../parity.vhd|0*1411*0x619257f8f4ecee1322b9910e80b43dd23abbcaf9|0*1571*0xab32bc1a2daf049573e14469f634e0e6
+M/only=M/Only 21|0|v98|1478521201112|./../parity.vhd|0*1674*0xecf50ff22a2e7828412133dcc13ac125e77589dd|0*1833*0xb33770ff1c10522f9491560174ac8e6c
+R=./../parity.vhd|25
+Version=9.1.2353.4205  (Windows)|00000003789cd3f5370600015b00b0
+Version/only=9.1.2353.4205  (Windows)|00000003789cd3f5370600015b00b0
+
+[not1]
+A/only=A/Only 21|./../parity.vhd|10|1*0
+BinI32/only=3*0
+I=0*297
+I/only=I/Only 0*531
+M=11|0|v98|1478521201034|./../parity.vhd|0*106*0x7da9ebf7c9bcdb24e5a42bb17ee2511377090ce9|0*227*0xab32bc1a2daf049573e14469f634e0e6
+M/only=M/Only 21|0|v98|1478521201049|./../parity.vhd|0*330*0x4306480b3dfe2e9ba0e1afb96c4c2089946b0960|0*453*0xb33770ff1c10522f9491560174ac8e6c
+R=./../parity.vhd|6
+Version=9.1.2353.4205  (Windows)|00000003789cd3f5370600015b00b0
+Version/only=9.1.2353.4205  (Windows)|00000003789cd3f5370600015b00b0
+
+[or4]
+A/only=A/Only 21|./../parity.vhd|40|1*2735
+BinI32/only=3*933
+I=0*2299
+I/only=I/Only 0*2544
+M=11|0|v98|1478521201127|./../parity.vhd|0*2093*0x0c4444c81fd8b89372d030a4cee81cd08b6fb3f0|0*2230*0xab32bc1a2daf049573e14469f634e0e6
+M/only=M/Only 21|0|v98|1478521201129|./../parity.vhd|0*2331*0x7b6f983a668f02e2fa1570164ec9ca57a2a6157c|0*2467*0xb33770ff1c10522f9491560174ac8e6c
+R=./../parity.vhd|35
+Version=9.1.2353.4205  (Windows)|00000003789cd3f5370600015b00b0
+Version/only=9.1.2353.4205  (Windows)|00000003789cd3f5370600015b00b0
+
+[or8]
+A/only=A/Only 21|./../parity.vhd|50|1*3623
+BinI32/only=3*1243
+I=0*3004
+I/only=I/Only 0*3269
+M=11|0|v98|1478521201143|./../parity.vhd|0*2777*0x236d2d7dee0960c34396dc7b95a2a553b86d620f|0*2935*0xab32bc1a2daf049573e14469f634e0e6
+M/only=M/Only 21|0|v98|1478521201159|./../parity.vhd|0*3036*0x5bb5b7e270ea4dd9f62a4334cde659f5bec5e247|0*3192*0xb33770ff1c10522f9491560174ac8e6c
+R=./../parity.vhd|45
+Version=9.1.2353.4205  (Windows)|00000003789cd3f5370600015b00b0
+Version/only=9.1.2353.4205  (Windows)|00000003789cd3f5370600015b00b0
+
+[parity]
+A/behavioral=A/Behavioral 21|./../parity.vhd|60|1*4799
+A/knf=A/KNF 21|./../parity.vhd|118|1*11093
+A/structural=A/Structural 21|./../parity.vhd|82|1*6004
+BinI32/behavioral=3*1606
+I=0*3674
+I/behavioral=I/Behavioral 0*4204
+I/knf=I/KNF 0*6507
+I/structural=I/Structural 0*5296
+M=11|0|v98|1478521201163|./../parity.vhd|0*3459*0x0b297156746fb6f44938a6567f34777c7db73ef5|0*3602*0xab32bc1a2daf049573e14469f634e0e6
+M/behavioral=M/Behavioral 21|0|v98|1478521201174|./../parity.vhd|0*3709*0x5ecf2d778c9212907cb46c19fba2c36841512d43|0*4118*0xb33770ff1c10522f9491560174ac8e6c
+M/knf=M/KNF 21|0|v98|1478521201194|./../parity.vhd|0*5496*0x71428e28cef0bd8d0f4d173a4c6c00489491f017|0*6428*0xb33770ff1c10522f9491560174ac8e6c
+M/structural=M/Structural 21|0|v98|1478521201190|./../parity.vhd|0*4250*0xf5de43fcb5936412d5833e6ddc233e4ff4df9d90|0*5210*0xb33770ff1c10522f9491560174ac8e6c
+R=./../parity.vhd|55
+Version=9.1.2353.4205  (Windows)|00000003789cd3f5370600015b00b0
+Version/behavioral=9.1.2353.4205  (Windows)|00000003789cd3f5370600015b00b0
+Version/knf=9.1.2353.4205  (Windows)|00000003789cd3f5370600015b00b0
+Version/structural=9.1.2353.4205  (Windows)|00000003789cd3f5370600015b00b0
+
+[test_parity]
+A/only=21|./../tparity.vhd|11|1*16183
+BinI32/only=3*2304
+I=0*7026
+I/only=0*8371
+M=11|0|v98|1478521201689|./../tparity.vhd|0*6819*0xe2d2e737389c398c9a3325816a3a4a1550a909b7|0*6948*0xab32bc1a2daf049573e14469f634e0e6
+M/only=21|0|v98|1478521201691|./../tparity.vhd|0*7066*0xab1ee11e25f6daa74ead6f54ef579522ba01e9fa|0*8285*0xb33770ff1c10522f9491560174ac8e6c
+R=./../tparity.vhd|7
+Version=9.1.2353.4205  (Windows)|00000003789cd3f5370600015b00b0
+Version/only=9.1.2353.4205  (Windows)|00000003789cd3f5370600015b00b0
+
+[~A]
+ModifyID=38
+Version=73
+
+[~MFT]
+0=54|0work.mgf|8371|0
+1=8|1work.mgf|16183|0
+3=6|3work.mgf|2304|0
+
+[~U]
+and4=And4 11|0*569|
+and8=And8 11|0*1212|
+not1=Not1 11|0*0|
+or4=Or4 11|0*1949|
+or8=Or8 11|0*2581|
+parity=Parity 11|0*3306|
+test_parity=11|0*6700|
+

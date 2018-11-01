@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;cell&apos; in &apos;Output.resultToCsv(...)&apos; to &apos;cell2&apos;&#x0D;&#x0A;- Original project: &apos;Datenbanken&apos;&#x0D;&#x0A;- Original element: &apos;Output.resultToCsv(ResultSet, PrintStream).cell&apos;&#x0D;&#x0A;- Renamed element: &apos;cell&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;cell&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{Output.java[Output~resultToCsv~QResultSet;~QPrintStream;@cell!4290!4324!4297!4300!QString;!0!false" name="cell2" references="true" stamp="1512397315700" version="1.0"/>
+</session>

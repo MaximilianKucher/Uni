@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Bestellung" type="BestellungType" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="BestellungType">
+    <xs:sequence>
+      <xs:element ref="Bestelldatum" />
+      <xs:element ref="Artikelnummer" />
+      <xs:element ref="Lieferantennummer" />
+      <xs:element ref="Menge" />
+      <xs:element ref="Artikelbezeichnung" />
+      <xs:element ref="Lieferantenname" />
+      <xs:element ref="Einzelpreis" />
+      <xs:element ref="Nettopreis" />
+      <xs:element ref="MwSt" />
+      <xs:element ref="Gesamtpreis" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="Bestelldatum">
+    <xs:simpleType>
+      <xs:restriction base="xs:date" />
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="Artikelnummer">
+    <xs:simpleType>
+      <xs:restriction base="xs:int" />
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="Lieferantennummer">
+    <xs:simpleType>
+      <xs:restriction base="xs:int" />
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="Menge">
+    <xs:simpleType>
+      <xs:restriction base="xs:decimal" />
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="Artikelbezeichnung">
+    <xs:simpleType>
+      <xs:restriction base="xs:string" />
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="Lieferantenname">
+    <xs:simpleType>
+      <xs:restriction base="xs:string" />
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="Einzelpreis">
+    <xs:simpleType>
+      <xs:restriction base="xs:decimal" />
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="Nettopreis">
+    <xs:simpleType>
+      <xs:restriction base="xs:decimal" />
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="MwSt">
+    <xs:simpleType>
+      <xs:restriction base="xs:decimal" />
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="Gesamtpreis">
+    <xs:simpleType>
+      <xs:restriction base="xs:decimal" />
+    </xs:simpleType>
+  </xs:element>
+
+</xs:schema>

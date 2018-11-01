@@ -1,0 +1,17 @@
+38
+~E 1 "./../parity.vhd" 15 And4
+~A 1 "./../parity.vhd" 20 Only
+~E 1 "./../parity.vhd" 25 And8
+~A 1 "./../parity.vhd" 30 Only
+~E 1 "./../parity.vhd" 6 Not1
+~A 1 "./../parity.vhd" 10 Only
+~E 1 "./../parity.vhd" 35 Or4
+~A 1 "./../parity.vhd" 40 Only
+~E 1 "./../parity.vhd" 45 Or8
+~A 1 "./../parity.vhd" 50 Only
+~E 1 "./../parity.vhd" 55 Parity
+~A 1 "./../parity.vhd" 60 Behavioral
+~A 1 "./../parity.vhd" 118 KNF
+~A 1 "./../parity.vhd" 82 Structural
+~E 1 "./../tparity.vhd" 7 test_parity
+~A 1 "./../tparity.vhd" 11 only

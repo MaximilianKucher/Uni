@@ -1,0 +1,14 @@
+SELECT DISTINCT Kunde.name AS kunde, Kunde.nr AS knr, Lieferant.name AS lieferant, Lieferant.nr AS lnr FROM Kunde
+LEFT OUTER JOIN Auftrag ON Kunde.nr = Auftrag.kundnr
+JOIN Auftragsposten ON Auftrag.auftrnr = Auftragsposten.auftrnr
+JOIN Teilestamm ON Auftragsposten.Teilnr = Teilestamm.Teilnr
+JOIN Lieferung ON Teilestamm.Teilnr = Lieferung.teilnr
+JOIN Lieferant ON Lieferung.liefnr = Lieferant.nr
+
+
+SELECT DISTINCT Kunde.name AS kunde, Kunde.nr AS knr, Lieferant.name AS lieferant, Lieferant.nr AS lnr FROM Lieferant
+JOIN Lieferung ON Lieferung.liefnr = Lieferant.nr
+JOIN Teilestamm ON Teilestamm.Teilnr = Lieferung.teilnr
+JOIN Auftragsposten ON Auftragsposten.Teilnr = Teilestamm.Teilnr
+JOIN Auftrag ON Auftrag.auftrnr = Auftragsposten.auftrnr
+RIGHT OUTER JOIN Kunde ON Kunde.nr = Auftrag.kundnr

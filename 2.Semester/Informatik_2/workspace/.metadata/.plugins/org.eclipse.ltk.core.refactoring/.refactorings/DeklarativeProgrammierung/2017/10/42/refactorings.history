@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;DeklarativeProgrammierung/Test.xml&apos; to &apos;Rechneruebung1.xml&apos;" description="Rename resource &apos;Test.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Test.xml" name="Rechneruebung1.xml" stamp="1508260218349" updateReferences="true"/>
+</session>

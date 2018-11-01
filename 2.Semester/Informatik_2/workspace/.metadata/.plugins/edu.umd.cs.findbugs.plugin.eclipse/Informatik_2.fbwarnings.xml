@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.2-dev-20160306-90c514b" sequence="8" timestamp="1493214789314" analysisTimestamp="1493214788814" release="">
+  <Project projectName="Informatik_2">
+    <Jar>H:\Hochschule\workspace\Informatik_2\bin\aufgabe\sieben</Jar>
+    <AuxClasspathEntry>H:\Hochschule\workspace\Informatik_2\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Max\.p2\pool\plugins\org.junit_4.12.0.v201504281640\junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Max\.p2\pool\plugins\org.hamcrest.core_1.3.0.v201303031735.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_101\lib\rt.jar</AuxClasspathEntry>
+    <SrcDir>H:\Hochschule\workspace\Informatik_2\src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="NS_DANGEROUS_NON_SHORT_CIRCUIT" priority="1" rank="15" abbrev="NS" category="STYLE" first="1" last="1" removedByChange="true">
+    <Class classname="aufgabe5.Selbststaendiger">
+      <SourceLine classname="aufgabe5.Selbststaendiger" sourcefile="Selbststaendiger.java" sourcepath="aufgabe5/Selbststaendiger.java"/>
+    </Class>
+    <Method classname="aufgabe5.Selbststaendiger" name="getTax" signature="()I" isStatic="false">
+      <SourceLine classname="aufgabe5.Selbststaendiger" start="25" end="46" startBytecode="0" endBytecode="327" sourcefile="Selbststaendiger.java" sourcepath="aufgabe5/Selbststaendiger.java"/>
+    </Method>
+    <SourceLine classname="aufgabe5.Selbststaendiger" start="29" end="29" startBytecode="54" endBytecode="54" sourcefile="Selbststaendiger.java" sourcepath="aufgabe5/Selbststaendiger.java"/>
+    <SourceLine classname="aufgabe5.Selbststaendiger" start="29" end="29" startBytecode="54" endBytecode="54" sourcefile="Selbststaendiger.java" sourcepath="aufgabe5/Selbststaendiger.java"/>
+  </BugInstance>
+  <BugInstance type="NS_DANGEROUS_NON_SHORT_CIRCUIT" priority="1" rank="15" abbrev="NS" category="STYLE" first="1" last="2" removedByChange="true">
+    <Class classname="aufgabe5.Studierender">
+      <SourceLine classname="aufgabe5.Studierender" sourcefile="Studierender.java" sourcepath="aufgabe5/Studierender.java"/>
+    </Class>
+    <Method classname="aufgabe5.Studierender" name="getTax" signature="()I" isStatic="false">
+      <SourceLine classname="aufgabe5.Studierender" start="12" end="37" startBytecode="0" endBytecode="391" sourcefile="Studierender.java" sourcepath="aufgabe5/Studierender.java"/>
+    </Method>
+    <SourceLine classname="aufgabe5.Studierender" start="16" end="16" startBytecode="46" endBytecode="46" sourcefile="Studierender.java" sourcepath="aufgabe5/Studierender.java"/>
+    <SourceLine classname="aufgabe5.Studierender" start="16" end="16" startBytecode="46" endBytecode="46" sourcefile="Studierender.java" sourcepath="aufgabe5/Studierender.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Wed, 26 Apr 2017 15:35:52 +0200" total_classes="2" referenced_classes="12" total_bugs="0" total_size="117" num_packages="1" java_version="1.8.0_101" vm_version="25.101-b13" cpu_seconds="2.11" clock_seconds="0.51" peak_mbytes="573.58" alloc_mbytes="1024.00" gc_seconds="0.02">
+    <PackageStats package="aufgabe.sieben" total_bugs="0" total_types="2" total_size="117">
+      <ClassStats class="aufgabe.sieben.DoppeltVerketteteListe" sourceFile="DoppeltVerketteteListe.java" interface="false" size="96" bugs="0"/>
+      <ClassStats class="aufgabe.sieben.ListElement" sourceFile="ListElement.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="165" invocations="2" avgMicrosecondsPerInvocation="82797" maxMicrosecondsPerInvocation="156727" standardDeviationMircosecondsPerInvocation="73930"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="77" invocations="302" avgMicrosecondsPerInvocation="255" maxMicrosecondsPerInvocation="2459" standardDeviationMircosecondsPerInvocation="197"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="77" invocations="302" avgMicrosecondsPerInvocation="255" maxMicrosecondsPerInvocation="4394" standardDeviationMircosecondsPerInvocation="470"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="11" invocations="80" avgMicrosecondsPerInvocation="147" maxMicrosecondsPerInvocation="627" standardDeviationMircosecondsPerInvocation="138"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1492363124936" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1492363124936" release="" codeSize="666" numClasses="14"/>
+    <AppVersion sequence="2" timestamp="1492363170721" release="" codeSize="16" numClasses="1"/>
+    <AppVersion sequence="3" timestamp="1492363220856" release="" codeSize="88" numClasses="7"/>
+    <AppVersion sequence="4" timestamp="1492581969123" release="" codeSize="98" numClasses="7"/>
+    <AppVersion sequence="5" timestamp="1492581993527" release="" codeSize="667" numClasses="14"/>
+    <AppVersion sequence="6" timestamp="1493214318389" release="" codeSize="96" numClasses="1"/>
+    <AppVersion sequence="7" timestamp="1493214322481" release="" codeSize="117" numClasses="2"/>
+  </History>
+</BugCollection>

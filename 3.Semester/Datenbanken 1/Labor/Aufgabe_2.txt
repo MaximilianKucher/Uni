@@ -1,0 +1,91 @@
+Aufgabe 2:
+
+
+
+2.1)
+CREATE VIEW v500009
+AS SELECT Bezeichnung, Name AS Lieferant
+FROM Lieferung
+JOIN Teilestamm ON Teilestamm.Teilnr = Lieferung.Teilnr
+JOIN Lieferant ON Lieferung.Liefnr = Lieferant.Nr
+AND Lieferung.Nettopreis IN 
+	(
+	SELECT MIN(Nettopreis)
+	FROM Lieferung
+	WHERE Lieferung.Teilnr=500009
+	)
+
+
+
+2.2)
+CREATE VIEW uebersicht
+AS SELECT Bezeichnung, SUM(Anzahl) AS Gesamtanzahl
+FROM Teilestamm
+JOIN Auftragsposten ON Teilestamm.Teilnr = Auftragsposten.Teilnr
+JOIN Lager ON Teilestamm.Teilnr = Lager.Teilnr
+GROUP BY Bezeichnung
+
+
+CREATE VIEW fehlendT
+AS SELECT uebersicht.Bezeichnung, Gesamtanzahl - Bestand AS Fehlend
+FROM Teilestamm
+JOIN Uebersicht ON Uebersicht.Bezeichnung = Teilestamm.Bezeichnung
+JOIN Lager ON Teilestamm.Teilnr = Lager.Teilnr
+WHERE (Gesamtanzahl - Bestand) > 0
+
+
+
+2.3)
+
+
+SELECT Name AS Vorgesetzter
+FROM Personal
+WHERE EXISTS
+	(
+	Select *
+	FROM Personal mitarbeiter
+	WHERE mitarbeiter.vorgesetzt = personal.persnr
+	)
+
+
+SELECT DISTINCT Name AS Vorgesetzter
+FROM Personal
+JOIN Personal mitarbeiter ON Personal.persnr = mitarbeiter.Vorgesetzt
+
+
+SELECT Name AS Vorgesetzter
+FROM Personal
+WHERE Personal.persnr IN
+	(
+	SELECT Vorgesetzt
+	FROM Personal
+	)
+
+
+SELECT Name AS Vorgesetzter
+FROM Personal
+WHERE Personal.persnr = ANY
+	(
+	SELECT Vorgesetzt
+	FROM Personal
+	)
+
+
+2.4)
+CREATE VIEW uebersicht2
+AS SELECT Nr AS Kundennummer, Kunde.Name AS Kundenname,Personal.vorgesetzt AS Vorgesetzter, Personal.Name AS Kundenbetreuer, SUM(Gesamtpreis) AS Preis, SUM(Gesamtpreis / 10) AS Rabatt
+FROM Auftrag
+JOIN Kunde ON Auftrag.Kundnr = Kunde.nr
+JOIN Auftragsposten ON Auftrag.auftrnr = Auftragsposten.Auftrnr
+JOIN Personal ON Auftrag.Persnr = Personal.Persnr
+WHERE Auftrag.Datum >= '01.10.08' AND Auftrag.Datum < '01.11.08'
+GROUP BY Nr, Kunde.Name, Personal.vorgesetzt, Personal.Name
+
+SELECT Kundennummer, Kundenname, Kundenbetreuer, Personal.Name AS Vorgesetzter, Preis, Rabatt
+FROM uebersicht2
+JOIN Personal ON uebersicht2.vorgesetzter = Personal.persnr
+WHERE Preis IN
+	(
+	SELECT Max(Preis)
+	FROM uebersicht2
+	)

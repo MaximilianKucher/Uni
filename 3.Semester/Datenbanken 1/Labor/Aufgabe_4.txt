@@ -1,0 +1,68 @@
+4.1)
+
+CREATE TABLE hilfsorganisationen (
+	name varchar(255) NOT NULL PRIMARY KEY 
+);
+
+CREATE TABLE enten (
+	nr int NOT NULL PRIMARY KEY,
+	grpNr int NOT NULL,
+	nameSponsor varchar(255),
+	startNr int NOT NULL UNIQUE
+);
+
+CREATE TABLE sponsoren (
+	name varchar(255) NOT NULL PRIMARY KEY,
+	geldbetrag int NOT NULL,
+	CHECK(geldbetrag >= 100)
+);
+
+CREATE TABLE dekorationsgruppen (
+	nr int NOT NULL PRIMARY KEY
+);
+
+CREATE TABLE preise (
+	nr int NOT NULL PRIMARY KEY,
+	grpNr int NOT NULL,
+	wert int NOT NULL,
+	unternehmen varchar(255) NOT NULL
+);
+
+CREATE TABLE startpositionen (
+	nr int NOT NULL PRIMARY KEY
+);
+
+CREATE TABLE zeugen (
+	nameZeuge varchar(255) NOT NULL PRIMARY KEY,
+	nameSponsor varchar(255) NOT NULL,
+	zeit datetime NOT NULL
+);
+
+ALTER TABLE enten ADD CONSTRAINT fk_enten1 FOREIGN KEY (grpNr) 
+	REFERENCES dekorationsgruppen(nr)
+	ON UPDATE CASCADE ON DELETE NO ACTION;
+	
+ALTER TABLE enten ADD CONSTRAINT fk_enten2 FOREIGN KEY (nameSponsor) 
+	REFERENCES sponsoren(name)
+	ON UPDATE CASCADE ON DELETE NO ACTION;
+	
+ALTER TABLE preise ADD CONSTRAINT fk_preise FOREIGN KEY (grpNr) 
+	REFERENCES dekorationsgruppen(nr)
+	ON UPDATE CASCADE ON DELETE NO ACTION;
+	
+ALTER TABLE startpositionen ADD CONSTRAINT fk_startpositionen FOREIGN KEY (nr) 
+	REFERENCES enten(nr)
+	ON UPDATE CASCADE ON DELETE NO ACTION;
+
+ALTER TABLE zeugen ADD CONSTRAINT fk_zeugen FOREIGN KEY (nameSponsor) 
+	REFERENCES sponsoren(name)
+	ON UPDATE CASCADE ON DELETE NO ACTION;
+	
+ALTER TABLE sponsoren ADD CONSTRAINT fk_sponsoren FOREIGN KEY (name)
+	REFERENCES hilfsorganisationen(name)
+	ON UPDATE CASCADE ON DELETE NO ACTION;
+
+4.2)
+
+4.3)
+aufgragsverwaltungen{ MitarbeiterNR,

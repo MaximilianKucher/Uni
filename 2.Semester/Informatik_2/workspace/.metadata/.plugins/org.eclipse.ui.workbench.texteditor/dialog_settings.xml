@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="String response;" key="selection"/>
+		<list key="findhistory">
+			<item value="String response;"/>
+			<item value="if (url.getPort() == null) {"/>
+			<item value="aktuellerZustand = aktuellerZustand.wechseln(1);"/>
+			<item value="//  "/>
+		</list>
+	</section>
+</section>

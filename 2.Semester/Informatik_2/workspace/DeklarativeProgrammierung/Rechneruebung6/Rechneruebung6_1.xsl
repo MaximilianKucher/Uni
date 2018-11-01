@@ -1,0 +1,31 @@
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <xsl:output method="xml" />
+
+	<xsl:template match="RECHNUNGEN"> 
+		<RECHNUNGEN>
+			<xsl:for-each select="RECHNUNG[ substring-before(AUSSTELLUNGSDATUM, '-') > '2010' ]">
+                <xsl:if test="NAME_UND_ANSCHRIFT_LEISTUNGSEMPFAENGER[starts-with(ANREDE, 'Herr')  or starts-with(ANREDE, 'Frau')]">
+                    <RECHNUNG>
+                        <ANREDE><xsl:value-of select="NAME_UND_ANSCHRIFT_LEISTUNGSEMPFAENGER/ANREDE"/></ANREDE>
+                        <NAME><xsl:value-of select="NAME_UND_ANSCHRIFT_LEISTUNGSEMPFAENGER/NAME"/></NAME>
+						<STRASSE><xsl:value-of select="NAME_UND_ANSCHRIFT_LEISTUNGSEMPFAENGER/STRASSE"/></STRASSE>
+						<ADRESSE><xsl:value-of select="NAME_UND_ANSCHRIFT_LEISTUNGSEMPFAENGER/ADRESSE"/></ADRESSE>
+						<AUSSTELLUNGSDATUM><xsl:value-of select="AUSSTELLUNGSDATUM"/></AUSSTELLUNGSDATUM>
+						<RECHNUNGSNUMMER><xsl:value-of select="RECHNUNGSNUMMER"/></RECHNUNGSNUMMER>
+						<RECHNUNGSGESAMTBRUTTOBETRAG><xsl:value-of select="ENTGELD_IN_EURO"/></RECHNUNGSGESAMTBRUTTOBETRAG>
+						<POSITIONEN>
+						<xsl:for-each select="LEISTUNGEN/LEISTUNG">
+							<POSITION>
+								<NUMMER><xsl:value-of select="NUMMER" /></NUMMER>
+								<BESCHREIBUNG><xsl:value-of select="HANDELSUEBLICHER_NAME" /></BESCHREIBUNG>
+								<GESAMTPREIS><xsl:value-of select="GESAMTPREIS" /></GESAMTPREIS>
+							</POSITION>
+						</xsl:for-each>
+						</POSITIONEN>
+                    </RECHNUNG>
+                </xsl:if>
+            </xsl:for-each>	
+		</RECHNUNGEN>
+	 </xsl:template>
+</xsl:stylesheet>

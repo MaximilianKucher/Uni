@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ToDoList</string>
+    <string name="Hint_Title" />
+    <string name="Hint_Text">Text</string>
+</resources>

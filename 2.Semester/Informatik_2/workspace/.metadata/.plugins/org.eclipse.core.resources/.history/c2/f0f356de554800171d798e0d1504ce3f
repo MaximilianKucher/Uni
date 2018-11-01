@@ -1,0 +1,17 @@
+package aufgabe.neun;
+
+public class Zustandsuebergaenge {
+  
+  public static void main(String[] args) {
+    Zustand aktuellerZustand = Zustaende.z0;
+    String eingabewort = "01011010100110";
+    
+    for (int i = 0; i < eingabewort.length(); i++) {
+      aktuellerZustand = aktuellerZustand.wechseln((int)eingabewort.charAt(i));
+    }
+    
+    System.out.println("Endzustand: " + aktuellerZustand.toString());
+    
+  }
+  
+}

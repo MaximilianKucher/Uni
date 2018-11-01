@@ -1,0 +1,9 @@
+ispLEVER Auto-Make Log File
+---------------------------
+
+Updating: Aldec VHDL Functional Simulation
+Start to record tcl script...
+Finished recording TCL script.
+
+Launching: 'C:\ispLEVER_Classic1_6\active-hdl\BIN\avhdl.exe -do "tparity_activehdl.do"'
+

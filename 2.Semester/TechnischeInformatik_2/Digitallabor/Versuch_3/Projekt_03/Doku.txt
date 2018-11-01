@@ -1,0 +1,106 @@
+Aufgabe 1
+
+Die richtigen Werte wurden in die Register geladen. Wir haben die Adressierungsart "Immediate Addressing" verwendet (#).
+Die Konstanten tauchen direkt im Maschinencode auf.
+
+
+
+Aufgabe 2
+
+Die richtigen Werte wurden in die Register geladen. Wir haben die Adressierungsart "Direct Addressing" verwendet.
+Anstelle der Konstanten findet man nun die Adresse der Variablen im Maschinencode.
+
+
+
+Aufgabe 3
+
+Die Rechenergebnisse stimmen.
+
+Flags  				C		Z		V		N	
+	
+	mov r1,op1		0		0		0		0
+	mov r2,op2		0		0		0		0								
+	mov r3,op3		0		0		0		1
+	mov r4,op4		0		0		0		0
+	mov r5,op5		0		0		0		1
+
+	mov r10,op1		0		0		0		1	
+	add r10,op2		0		0		1		1	(30000+5000) das overflow-flag ist gesetzt, da es eine Zahlenbereichsüberschreitung gibt: vorzeichen 1 + vorzeichen 0 = vorzeichen 0
+												     das negative-flag ist gesetzt, da das Ergebnis als signed interpretiert eine negative Zahl ist.
+
+	mov r11,op1		0		0		1		0
+	add r11,op3		1		0		0		0	(30000+40000) 0x7530 + 0x9C40 das carry-flag ist gesetzt, da das Ergebnis größer als 65535 ist und somit ein Übertrag bei der unsigned addition entsteht.
+
+	mov r12,op4		1		0		0		0
+	sub r12,op2		1		0		0		1	(4999-5000) das negative-flag ist gesetzt, da das Ergebnis eine negative Zahl ist.
+												    das carry-flag ist gesetzt, da bei der unsigned subtraktion ein Übertrag entsteht.
+
+	mov r13,op1		1		0		0		0
+	add r13,op5		1		1		0		0	(30000+(-30000)) 0x7530 + 0x8AD0 das zero-flag ist gestezt, da das Ergebnis gleich 0 ist.
+															 das carry-flag ist gesetzt, da intern nicht 30000-30000 gerechnet wird, sondern 0x7530 + 0x8AD0 und dabei entsteht ein Übertrag bei der unsigned addition.
+
+	mov r14,op3		1		0		0		1	das negative-flag wird gesetzt, da 40000 = 0x9c40 signed interpretiert eine negative Zahl ist.
+	add r14,op5		1		0		1		0	(40000+(-30000)) 0x9c40 + 0x8ad0 = 0x2710 das carry-flag ist gesetzt, da intern nicht 40000-30000 gerechnet wird, sondern 0x9c40 + 0x8AD0 und dabei entsteht ein Überrag bei der unsigned addition.
+																  das overflow-flag ist gesetzt, da es eine Zahlenbereichsüberschreitung gibt: vorzeichen 1 + vorzeichen 1 = vorzeichen 0
+
+
+
+Aufgabe 4
+
+---
+
+
+
+Aufgabe 5
+
+120000 + 45000 = 0x0002F9B8
+120000 - 45000 = 0xAFC8
+45000 - 120000 = 0xFFFF5038
+
+
+
+
+
+
+	mov r0,#op1
+	mov r1,#op2
+	call cc_UC,Function1
+	mov r10,r2
+	
+	mov r0,#op1
+	mov r1,#op3
+	call cc_UC,Function1
+	mov r11,r2
+
+	mov r0,#op1
+	mov r1,#op5
+	call cc_UC,Function1
+	mov r13,r2
+
+	mov r0,#op3
+	mov r1,#op5
+	call cc_UC,Function1
+	mov r14,r2
+
+;	Ende Aufgabe 4
+
+;	Aufgabe 5
+
+	mov r0,#MyVar32_1
+	mov r1,#MyVar32_2
+	call cc_UC,add32
+	mov r6,r2
+	mov r7,r3
+
+	mov r0,#MyVar32_1
+	mov r1,#MyVar32_2
+	call cc_UC,sub32
+	mov r6,r2
+	mov r7,r3
+
+	mov r0,#MyVar32_2
+	mov r1,#MyVar32_1
+	call cc_UC,sub32
+	mov r6,r2
+	mov r7,r3
+

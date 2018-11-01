@@ -1,0 +1,154 @@
+C166 COMPILER V6.17, VORLAGE_FUR_AUFGABE_1                                                 06/19/2017 14:22:29 PAGE 1   
+
+
+C166 COMPILER V6.17, COMPILATION OF MODULE VORLAGE_FUR_AUFGABE_1
+OBJECT MODULE PLACED IN .\Vorlage fur Aufgabe 1.obj
+COMPILER INVOKED BY: C:\Keil\C166\BIN\C166.EXE ..\Vorlage fur Aufgabe 1.c MODV2 BROWSE FLOAT64 MODV2 DEFINE(TEIL_B) DEBU
+                    -G CODE OBJECT(.\Vorlage fur Aufgabe 1.obj) 
+
+ stmt lvl     source
+
+    1         
+    2         /***********************************************************************************************
+    3         * Mit dieser Vorlage können Sie die einzelnen Teilaufgaben bei der Abnahme schnell anwählen    *
+    4         * Der Quelltext von Aufgabe a ist schon eingetragen. Für die anderen Teilaufgaben kopieren Sie *
+    5         * diesen Quelltext in die entsprechenden Bereiche der Vorlage und modifizieren ihn.            *
+    6         *                                                                                              *
+    7         * Welcher Quelltext dann übersetzt werden soll, bestimmen Sie in den Target Options / C166     *
+    8         * Dort tragen Sie im Feld "Define:" einfach "TEIL_A" oder "TEIL_B" oder "TEIL_C" usw. ein.     *
+    9         ***********************************************************************************************/
+   10         
+   11         
+   12         #ifdef TEIL_A //Teilaufgabe a)
+              
+              void main(void) {
+                      int fahr, celsius;
+                      int lower, upper,step;
+              
+                      lower = 0;
+                      upper = 300;
+                      step = 20;
+              
+              
+                      fahr = lower;
+                      while (fahr <= upper) {
+                              celsius = 5 * (fahr-32) / 9;
+                              fahr = fahr + step;
+                      }
+              }
+              
+              #endif //Teilaufgabe a)
+   31         
+   32         
+   33         
+   34         #ifdef TEIL_B  //Teilaufgabe b)
+   35         
+   36         int celsius;
+   37         
+   38         void main(void) {
+   39  1              int fahr;
+   40  1              int lower, upper,step;
+   41  1      
+   42  1              lower = 0;
+   43  1              upper = 300;
+   44  1              step = 20;
+   45  1      
+   46  1      
+   47  1              fahr = lower;
+   48  1              while (fahr <= upper) {
+   49  2                      celsius = 5 * (fahr-32) / 9;
+   50  2                      fahr = fahr + step;
+   51  2              }
+   52  1      }
+   53         
+   54         #endif //Teilaufgabe b)
+C166 COMPILER V6.17, VORLAGE_FUR_AUFGABE_1                                                 06/19/2017 14:22:29 PAGE 2   
+
+   55         
+   56         
+   57         
+   58         #ifdef TEIL_C //Teilaufgabe c)
+              
+              #endif //Teilaufgabe c)
+   61         
+   62         
+   63         
+   64         #ifdef TEIL_D1 //Teilaufgabe d) mit long
+              
+              #endif //Teilaufgabe d) mit long
+   67         
+   68         
+   69         
+   70         #ifdef TEIL_D2 //Teilaufgabe d) mit float
+              
+              #endif //Teilaufgabe d) mit float
+   73         
+   74         
+   75         
+   76         #ifdef TEIL_D3 //Teilaufgabe d) mit double
+              
+              #endif //Teilaufgabe d) mit double
+   79         
+   80         
+   81         
+   82         #ifdef TEIL_E //Teilaufgabe e)
+              /* Kleiner Tipp: Wann verwendet man eine while und wann eine for Schleife? */
+              #endif //Teilaufgabe e)
+   85         
+   86         
+C166 COMPILER V6.17, VORLAGE_FUR_AUFGABE_1                                                 06/19/2017 14:22:29 PAGE 3   
+
+ASSEMBLY LISTING OF GENERATED OBJECT CODE
+
+
+             ; FUNCTION main (BEGIN  RMASK = @0x6070)
+                                           ; SOURCE LINE # 38
+                                           ; SOURCE LINE # 42
+                                           ; SOURCE LINE # 43
+                                           ; SOURCE LINE # 44
+                                           ; SOURCE LINE # 47
+0000 E006          MOV       R6,#00H
+;---- Variable 'fahr' assigned to Register 'R6' ----
+                                           ; SOURCE LINE # 48
+0002         ?C0003:
+                                           ; SOURCE LINE # 49
+0002 F056          MOV       R5,R6
+0004 26F52000      SUB       R5,#020H
+0008 F045          MOV       R4,R5
+000A 5C25          SHL       R5,#02H
+000C 0054          ADD       R5,R4
+000E E094          MOV       R4,#09H
+0010 F6F50EFE      MOV       MDL,R5
+0014 4B44          DIV       R4
+0016 F6070000 R    MOV       celsius,MDL
+                                           ; SOURCE LINE # 50
+001A 06F61400      ADD       R6,#014H
+                                           ; SOURCE LINE # 51
+001E 46F62C01      CMP       R6,#012CH
+0022 BDEF          JMPR      cc_SLE,?C0003
+0024         ?C0002:
+                                           ; SOURCE LINE # 52
+0024 CB00          RET       
+             ; FUNCTION main (END    RMASK = @0x6070)
+
+
+
+MODULE INFORMATION:   INITIALIZED  UNINITIALIZED
+  CODE SIZE        =          38     --------
+  NEAR-CONST SIZE  =    --------     --------
+  FAR-CONST SIZE   =    --------     --------
+  HUGE-CONST SIZE  =    --------     --------
+  XHUGE-CONST SIZE =    --------     --------
+  NEAR-DATA SIZE   =           2     --------
+  FAR-DATA SIZE    =    --------     --------
+  XHUGE-DATA SIZE  =    --------     --------
+  IDATA-DATA SIZE  =    --------     --------
+  SDATA-DATA SIZE  =    --------     --------
+  BDATA-DATA SIZE  =    --------     --------
+  HUGE-DATA SIZE   =    --------     --------
+  BIT SIZE         =    --------     --------
+  INIT'L SIZE      =    --------     --------
+END OF MODULE INFORMATION.
+
+
+C166 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

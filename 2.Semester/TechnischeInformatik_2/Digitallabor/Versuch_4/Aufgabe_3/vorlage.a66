@@ -1,0 +1,127 @@
+;$NONSEGMENTED              ; Nur Tiny Model möglich
+$MODV2                 ; Code fuer 161/163/164/165/167
+$NOLIST
+$INCLUDE (REG167.INC)   ; include CPU definition file 
+$LIST
+;
+;	TITLE <Mein Text>
+;
+;	Prozessor Definitionen
+;
+;------------------------------------------------------------
+; Hier folgen Ihre Konstanten Definitionen
+;
+Ora     	EQU	0	;Portbit für Ora
+Schalter1	EQU 0
+Schalter2	EQU 1
+Taster1		EQU 2
+Taster2		EQU 3
+LED1_ROT	EQU 4
+LED2_GELB	EQU 5
+LED3_GRUEN	EQU 6
+LED4_ROT	EQU 7
+
+
+Datenspeicher	SECTION Data
+;------------------------------------------------------------
+; Hier folgen Ihre Speicher Vereinbarungen
+;
+Mein_Speicher           DB      12      ;Byte Initialisiert
+Mein_Speicher1          DW      65      ;Word Initialisiert
+Mein_Speicher2          DD      4711
+Mein_Text               DB      'ASCII Text'
+
+Datenspeicher	ENDS
+;
+;
+Programme	Section Code
+ASSUME	DPP3:SYSTEM
+ASSUME  DPP0:Datenspeicher
+;------------------------------------------------------------
+; Hier stehen Ihre Unterprogramme
+;
+;
+;PInit	Initialisiert den Port Px
+;=====
+;	I: nix
+;	O: nix
+;	Z: Register, die zerstört werden.
+;
+MyUp1	PROC NEAR
+
+	Ret
+MyUp1	EndP
+
+PortInit PROC
+	mov r0,#0x0080
+	mov P0_IOCR_4,r0
+	mov P0_IOCR_5,r0
+	mov P0_IOCR_6,r0
+	mov P0_IOCR_7,r0
+
+	mov r0,#0x0000
+	mov P0_IOCR_0,r0
+	mov P0_IOCR_1,r0
+	mov P0_IOCR_2,r0
+	mov P0_IOCR_3,r0
+	ret
+PortInit EndP
+
+;------------------------------------------------------------
+; Hier startet das Hauptprogramm
+;
+A_RESET	PROC TASK STARTUP INTNO RESET = 0
+	mov	r0,BUSCON0
+	and	r0,#0xFF00
+	mov	BUSCON0,r0
+	mov	dpp0,#PAG Datenspeicher		;Page von Datenspeicher => DPP0
+	mov 	KSCCFG,#0x0003;     		;Module Enable
+	mov 	R0,KSCCFG			;wieder ruecklesen
+	JMP	Main	
+A_RESET	EndP
+
+MAIN	Proc
+;------------------------------------------------------------
+;Hier geht Ihr Hauptprogramm los
+;
+	Call PortInit
+
+	Loop:
+
+	Mov r0,P0_IN
+	And r0,#0x0004
+	Jmp cc_NZ,Ist_Eins_1
+	And P0_OUT,#0xFFEF
+	Jmp cc_UC,Fertig_1
+	Ist_Eins_1:
+	Or P0_OUT,#0x0010
+	Fertig_1:
+
+	Mov r0,P0_IN
+	And r0,#0x0008
+	Jmp cc_NZ,Ist_Eins_2
+	And P0_OUT,#0xFFDF
+	Jmp cc_UC,Fertig_2
+	Ist_Eins_2:
+	Or P0_OUT,#0x0020
+	Fertig_2:
+
+	jmp Loop
+		
+	Call	MyUp1	
+
+Forever:
+
+
+	jmp		Forever
+;
+;  Notstop
+;
+StopJetzt:	JMP	StopJetzt
+
+Main		ENDP
+
+Programme	ENDS
+;
+
+	END

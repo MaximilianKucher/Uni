@@ -1,0 +1,29 @@
+#VRML V2.0 utf8
+
+Shape
+{
+	appearance Appearance
+	{
+		material Material
+		{
+			diffuseColor 1 1 0
+		}
+	}
+	geometry Cylinder
+	{
+		radius 2
+		height 2
+	}
+	
+	Transform 
+	{
+		translation 0 0 1
+		children 
+		[
+			geometry Sphere
+			{
+				readius 2
+			}
+		]
+	}
+}

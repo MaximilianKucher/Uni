@@ -1,0 +1,37 @@
+
+
+MODULE Parity
+
+	SUBMODULE And8
+		INSTANCE Final
+
+	SUBMODULE or4
+		INSTANCE Maxterm1
+		INSTANCE Maxterm2
+		INSTANCE Maxterm3
+		INSTANCE Maxterm4
+		INSTANCE Maxterm5
+		INSTANCE Maxterm6
+		INSTANCE Maxterm7
+		INSTANCE Maxterm8
+
+	SUBMODULE Not1
+		INSTANCE Inv1
+		INSTANCE Inv2
+		INSTANCE Inv3
+		INSTANCE Inv4
+
+
+MODULE Or8
+
+
+MODULE Or4
+
+
+MODULE And8
+
+
+MODULE And4
+
+
+MODULE Not1

@@ -1,0 +1,9 @@
+Teilfaufgabe | Codegröße | Laufzeit
+_____________|___________|_________
+      a           518	    3.90mys	// Es fehlt fast alles (compiler ist schlau :))
+      b		  542	   12.15mys	// erst multiplikation mit 4 durch bitshift nach links dann noch einmal addieren --> multiplikation mit 5
+      c	 	  548	   13.50mys	// Parameterübergabe über R8 zur funktion, zurückgegeben wird nichts
+      d1	  788      42.85mys	//
+      d2	 1402	  293.00mys	//
+      d3 	 2010	  625.65mys	//
+      e		 1842	  490.50mys	// wir kennen die anzahl der schleifendurchläufe --> for-schleife		

@@ -1,0 +1,18 @@
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+public class BruchTest {
+
+  public void testBruch() {
+    Bruch bruch = new Bruch(8,5);
+    assertEquals(8,bruch.getZaehler());
+    assertEquals(5,bruch.getNenner());
+  }
+  
+  public void testKuerzen() {
+    
+  }
+
+}
+

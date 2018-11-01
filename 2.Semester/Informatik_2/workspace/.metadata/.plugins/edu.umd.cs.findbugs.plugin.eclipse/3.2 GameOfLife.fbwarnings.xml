@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.2-dev-20160306-90c514b" sequence="6" timestamp="1490769803473" analysisTimestamp="1490769803094" release="">
+  <Project projectName="3.2 GameOfLife">
+    <Jar>E:\Hochschule\workspace\3.2 GameOfLife\bin\de\hska\iwii\i2\gol\GameOfLifeLogicTest.class</Jar>
+    <AuxClasspathEntry>E:\Hochschule\workspace\3.2 GameOfLife\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Eclipse Public License\Eclipse 4.6\eclipse\plugins\org.junit_4.12.0.v201504281640\junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Eclipse Public License\Eclipse 4.6\eclipse\plugins\org.hamcrest.core_1.3.0.v201303031735.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\JDK8\jre\lib\rt.jar</AuxClasspathEntry>
+    <SrcDir>E:\Hochschule\workspace\3.2 GameOfLife\src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="1">
+    <Class classname="de.hska.iwii.i2.gol.GameOfLifeLogic">
+      <SourceLine classname="de.hska.iwii.i2.gol.GameOfLifeLogic" sourcefile="GameOfLifeLogic.java" sourcepath="de/hska/iwii/i2/gol/GameOfLifeLogic.java"/>
+    </Class>
+    <Method classname="de.hska.iwii.i2.gol.GameOfLifeLogic" name="setStartGeneration" signature="([[Z)V" isStatic="false">
+      <SourceLine classname="de.hska.iwii.i2.gol.GameOfLifeLogic" start="19" end="20" startBytecode="0" endBytecode="61" sourcefile="GameOfLifeLogic.java" sourcepath="de/hska/iwii/i2/gol/GameOfLifeLogic.java"/>
+    </Method>
+    <Field classname="de.hska.iwii.i2.gol.GameOfLifeLogic" name="startGeneration" signature="[[Z" isStatic="false">
+      <SourceLine classname="de.hska.iwii.i2.gol.GameOfLifeLogic" sourcefile="GameOfLifeLogic.java" sourcepath="de/hska/iwii/i2/gol/GameOfLifeLogic.java"/>
+    </Field>
+    <LocalVariable name="generation" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="de.hska.iwii.i2.gol.GameOfLifeLogic" start="19" end="19" startBytecode="2" endBytecode="2" sourcefile="GameOfLifeLogic.java" sourcepath="de/hska/iwii/i2/gol/GameOfLifeLogic.java"/>
+    <SourceLine classname="de.hska.iwii.i2.gol.GameOfLifeLogic" start="19" end="19" startBytecode="2" endBytecode="2" sourcefile="GameOfLifeLogic.java" sourcepath="de/hska/iwii/i2/gol/GameOfLifeLogic.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" rank="15" abbrev="ST" category="STYLE" first="1" last="4" removedByChange="true">
+    <Class classname="de.hska.iwii.i2.gol.GameOfLifeLogic">
+      <SourceLine classname="de.hska.iwii.i2.gol.GameOfLifeLogic" sourcefile="GameOfLifeLogic.java" sourcepath="de/hska/iwii/i2/gol/GameOfLifeLogic.java"/>
+    </Class>
+    <Method classname="de.hska.iwii.i2.gol.GameOfLifeLogic" name="nextGeneration" signature="()V" isStatic="false">
+      <SourceLine classname="de.hska.iwii.i2.gol.GameOfLifeLogic" start="90" end="137" startBytecode="0" endBytecode="483" sourcefile="GameOfLifeLogic.java" sourcepath="de/hska/iwii/i2/gol/GameOfLifeLogic.java"/>
+    </Method>
+    <Field classname="de.hska.iwii.i2.gol.GameOfLifeLogic" name="naechsteGeneration" signature="[[Z" isStatic="true">
+      <SourceLine classname="de.hska.iwii.i2.gol.GameOfLifeLogic" sourcefile="GameOfLifeLogic.java" sourcepath="de/hska/iwii/i2/gol/GameOfLifeLogic.java"/>
+    </Field>
+    <SourceLine classname="de.hska.iwii.i2.gol.GameOfLifeLogic" start="90" end="90" startBytecode="16" endBytecode="16" sourcefile="GameOfLifeLogic.java" sourcepath="de/hska/iwii/i2/gol/GameOfLifeLogic.java"/>
+    <SourceLine classname="de.hska.iwii.i2.gol.GameOfLifeLogic" start="90" end="90" startBytecode="16" endBytecode="16" sourcefile="GameOfLifeLogic.java" sourcepath="de/hska/iwii/i2/gol/GameOfLifeLogic.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" rank="15" abbrev="ST" category="STYLE" first="2" last="2" removedByChange="true">
+    <Class classname="de.hska.iwii.i2.gol.GameOfLifeLogic">
+      <SourceLine classname="de.hska.iwii.i2.gol.GameOfLifeLogic" sourcefile="GameOfLifeLogic.java" sourcepath="de/hska/iwii/i2/gol/GameOfLifeLogic.java"/>
+    </Class>
+    <Method classname="de.hska.iwii.i2.gol.GameOfLifeLogic" name="setStartGeneration" signature="([[Z)V" isStatic="false">
+      <SourceLine classname="de.hska.iwii.i2.gol.GameOfLifeLogic" start="19" end="21" startBytecode="0" endBytecode="84" sourcefile="GameOfLifeLogic.java" sourcepath="de/hska/iwii/i2/gol/GameOfLifeLogic.java"/>
+    </Method>
+    <Field classname="de.hska.iwii.i2.gol.GameOfLifeLogic" name="naechsteGeneration" signature="[[Z" isStatic="true">
+      <SourceLine classname="de.hska.iwii.i2.gol.GameOfLifeLogic" sourcefile="GameOfLifeLogic.java" sourcepath="de/hska/iwii/i2/gol/GameOfLifeLogic.java"/>
+    </Field>
+    <SourceLine classname="de.hska.iwii.i2.gol.GameOfLifeLogic" start="20" end="20" startBytecode="21" endBytecode="21" sourcefile="GameOfLifeLogic.java" sourcepath="de/hska/iwii/i2/gol/GameOfLifeLogic.java"/>
+    <SourceLine classname="de.hska.iwii.i2.gol.GameOfLifeLogic" start="20" end="20" startBytecode="21" endBytecode="21" sourcefile="GameOfLifeLogic.java" sourcepath="de/hska/iwii/i2/gol/GameOfLifeLogic.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Wed, 29 Mar 2017 08:43:02 +0200" total_classes="1" referenced_classes="12" total_bugs="1" total_size="142" num_packages="1" java_version="1.8.0_121" vm_version="25.121-b13" cpu_seconds="1.40" clock_seconds="0.39" peak_mbytes="555.88" alloc_mbytes="1024.00" gc_seconds="0.02" priority_2="1">
+    <PackageStats package="de.hska.iwii.i2.gol" total_bugs="1" total_types="2" total_size="142" priority_2="1">
+      <ClassStats class="de.hska.iwii.i2.gol.GameOfLifeLogicTest" sourceFile="GameOfLifeLogicTest.java" interface="false" size="142" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="126" invocations="309" avgMicrosecondsPerInvocation="410" maxMicrosecondsPerInvocation="17483" standardDeviationMircosecondsPerInvocation="1184"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="92" invocations="2" avgMicrosecondsPerInvocation="46478" maxMicrosecondsPerInvocation="85265" standardDeviationMircosecondsPerInvocation="38787"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="53" invocations="309" avgMicrosecondsPerInvocation="172" maxMicrosecondsPerInvocation="1505" standardDeviationMircosecondsPerInvocation="100"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1490766197825" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1490766197827" release="" codeSize="58" numClasses="1"/>
+    <AppVersion sequence="2" timestamp="1490766398530" release="" codeSize="58" numClasses="1"/>
+    <AppVersion sequence="3" timestamp="1490766616271" release="" codeSize="58" numClasses="1"/>
+    <AppVersion sequence="4" timestamp="1490766622986" release="" codeSize="100" numClasses="1"/>
+    <AppVersion sequence="5" timestamp="1490766765937" release="" codeSize="58" numClasses="1"/>
+  </History>
+</BugCollection>

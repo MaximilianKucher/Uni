@@ -1,0 +1,288 @@
+C166 COMPILER V6.17, VORLAGE_FUR_AUFGABE_1                                                 06/19/2017 15:25:53 PAGE 1   
+
+
+C166 COMPILER V6.17, COMPILATION OF MODULE VORLAGE_FUR_AUFGABE_1
+OBJECT MODULE PLACED IN .\Vorlage fur Aufgabe 1.obj
+COMPILER INVOKED BY: C:\Keil\C166\BIN\C166.EXE ..\Vorlage fur Aufgabe 1.c MODV2 BROWSE FLOAT64 MODV2 DEFINE(TEIL_D2) DEB
+                    -UG CODE OBJECT(.\Vorlage fur Aufgabe 1.obj) 
+
+ stmt lvl     source
+
+    1         
+    2         /***********************************************************************************************
+    3         * Mit dieser Vorlage können Sie die einzelnen Teilaufgaben bei der Abnahme schnell anwählen    *
+    4         * Der Quelltext von Aufgabe a ist schon eingetragen. Für die anderen Teilaufgaben kopieren Sie *
+    5         * diesen Quelltext in die entsprechenden Bereiche der Vorlage und modifizieren ihn.            *
+    6         *                                                                                              *
+    7         * Welcher Quelltext dann übersetzt werden soll, bestimmen Sie in den Target Options / C166     *
+    8         * Dort tragen Sie im Feld "Define:" einfach "TEIL_A" oder "TEIL_B" oder "TEIL_C" usw. ein.     *
+    9         ***********************************************************************************************/
+   10         
+   11         
+   12         #ifdef TEIL_A //Teilaufgabe a)
+              
+              void main(void) {
+                      int fahr, celsius;
+                      int lower, upper,step;
+              
+                      lower = 0;
+                      upper = 300;
+                      step = 20;
+              
+              
+                      fahr = lower;
+                      while (fahr <= upper) {
+                              celsius = 5 * (fahr-32) / 9;
+                              fahr = fahr + step;
+                      }
+              }
+              
+              #endif //Teilaufgabe a)
+   31         
+   32         
+   33         
+   34         #ifdef TEIL_B  //Teilaufgabe b)
+              
+              int celsius;
+              
+              void main(void) {
+                      int fahr;
+                      int lower, upper,step;
+              
+                      lower = 0;
+                      upper = 300;
+                      step = 20;
+              
+              
+                      fahr = lower;
+                      while (fahr <= upper) {
+                              celsius = 5 * (fahr-32) / 9;
+                              fahr = fahr + step;
+                      }
+              }
+              
+              #endif //Teilaufgabe b)
+C166 COMPILER V6.17, VORLAGE_FUR_AUFGABE_1                                                 06/19/2017 15:25:53 PAGE 2   
+
+   55         
+   56         
+   57         
+   58         #ifdef TEIL_C //Teilaufgabe c)
+              
+              int fahr2cels(int fahr) {
+                      return 5 * (fahr - 32) / 9;
+              }
+              
+              void main(void) {
+                      int fahr,celsius;
+                      int lower, upper,step;
+              
+                      lower = 0;
+                      upper = 300;
+                      step = 20;
+              
+              
+                      fahr = lower;
+                      while (fahr <= upper) {
+                              celsius = fahr2cels(fahr);
+                              fahr = fahr + step;
+                      }
+              }
+              
+              #endif //Teilaufgabe c)
+   81         
+   82         
+   83         
+   84         #ifdef TEIL_D1 //Teilaufgabe d) mit long
+              
+              long fahr2cels(long fahr) {
+                      return 5 * (fahr - 32) / 9;
+              }
+              
+              void main(void) {
+                      long fahr,celsius;
+                      int lower, upper,step;
+              
+                      lower = 0;
+                      upper = 300;
+                      step = 20;
+              
+              
+                      fahr = lower;
+                      while (fahr <= upper) {
+                              celsius = fahr2cels(fahr);
+                              fahr = fahr + step;
+                      }
+              }
+              
+              #endif //Teilaufgabe d) mit long
+  107         
+  108         
+  109         
+  110         #ifdef TEIL_D2 //Teilaufgabe d) mit float
+  111         
+  112         float fahr2cels(float fahr) {
+  113  1              return 5 * (fahr - 32) / 9;
+  114  1      }
+  115         
+  116         void main(void) {
+C166 COMPILER V6.17, VORLAGE_FUR_AUFGABE_1                                                 06/19/2017 15:25:53 PAGE 3   
+
+  117  1              float fahr,celsius;
+  118  1              int lower, upper,step;
+  119  1      
+  120  1              lower = 0;
+  121  1              upper = 300;
+  122  1              step = 20;
+  123  1      
+  124  1      
+  125  1              fahr = lower;
+  126  1              while (fahr <= upper) {
+  127  2                      celsius = fahr2cels(fahr);
+  128  2                      fahr = fahr + step;
+  129  2              }
+  130  1      }
+  131         
+  132         #endif //Teilaufgabe d) mit float
+  133         
+  134         
+  135         
+  136         #ifdef TEIL_D3 //Teilaufgabe d) mit double
+              
+              double fahr2cels(double fahr) {
+                      return 5 * (fahr - 32) / 9;
+              }
+              
+              void main(void) {
+                      double fahr,celsius;
+                      int lower,upper,step;
+              
+                      lower = 0;
+                      upper = 300;
+                      step = 20;
+              
+              
+                      fahr = lower;
+                      while (fahr <= upper) {
+                              celsius = fahr2cels(fahr);
+                              fahr = fahr + step;
+                      }
+              }
+              
+              #endif //Teilaufgabe d) mit double
+  159         
+  160         
+  161         
+  162         #ifdef TEIL_E //Teilaufgabe e)
+              /* Kleiner Tipp: Wann verwendet man eine while und wann eine for Schleife? */
+              
+              double fahr2cels(double fahr) {
+                      return 5 * (fahr - 32) / 9;
+              }
+              
+              void main(void) {
+                      double fahr,celsius;
+                      int lower,upper,step,i;
+              
+                      lower = 0;
+                      step = 20;
+              
+              
+                      fahr = lower;
+                      for (i = 0; i < 15; i++) {
+C166 COMPILER V6.17, VORLAGE_FUR_AUFGABE_1                                                 06/19/2017 15:25:53 PAGE 4   
+
+                              celsius = fahr2cels(fahr);
+                              fahr = fahr + step;
+                      }
+              }
+              
+              #endif //Teilaufgabe e)
+  185         
+  186         
+C166 COMPILER V6.17, VORLAGE_FUR_AUFGABE_1                                                 06/19/2017 15:25:53 PAGE 5   
+
+ASSEMBLY LISTING OF GENERATED OBJECT CODE
+
+
+             ; FUNCTION fahr2cels (BEGIN  RMASK = @0x67FE)
+                                           ; SOURCE LINE # 112
+;---- Variable 'fahr' assigned to Register 'R8/R9' ----
+                                           ; SOURCE LINE # 113
+0000 E006          MOV       R6,#00H
+0002 E6F70042      MOV       R7,#04200H
+0006 F048          MOV       R4,R8
+0008 F059          MOV       R5,R9
+000A CA000000 E    CALLA     cc_UC,?C_FPSUB
+000E F064          MOV       R6,R4
+0010 F075          MOV       R7,R5
+0012 E004          MOV       R4,#00H
+0014 E6F5A040      MOV       R5,#040A0H
+0018 CA000000 E    CALLA     cc_UC,?C_FPMUL
+001C E006          MOV       R6,#00H
+001E E6F71041      MOV       R7,#04110H
+0022 CA000000 E    CALLA     cc_UC,?C_FPDIV
+                                           ; SOURCE LINE # 114
+0026 CB00          RET       
+             ; FUNCTION fahr2cels (END    RMASK = @0x67FE)
+
+             ; FUNCTION main (BEGIN  RMASK = @0x7FFE)
+                                           ; SOURCE LINE # 116
+                                           ; SOURCE LINE # 120
+                                           ; SOURCE LINE # 121
+                                           ; SOURCE LINE # 122
+                                           ; SOURCE LINE # 125
+0028 E00C          MOV       R12,#00H
+002A E00D          MOV       R13,#00H
+;---- Variable 'fahr' assigned to Register 'R12/R13' ----
+                                           ; SOURCE LINE # 126
+002C 0D0C          JMPR      cc_UC,?C0002
+002E         ?C0004:
+                                           ; SOURCE LINE # 127
+002E F08C          MOV       R8,R12
+0030 F09D          MOV       R9,R13
+0032 BBE6          CALLR     fahr2cels
+                                           ; SOURCE LINE # 128
+0034 E006          MOV       R6,#00H
+0036 E6F7A041      MOV       R7,#041A0H
+003A F04C          MOV       R4,R12
+003C F05D          MOV       R5,R13
+003E CA000000 E    CALLA     cc_UC,?C_FPADD
+0042 F0C4          MOV       R12,R4
+0044 F0D5          MOV       R13,R5
+                                           ; SOURCE LINE # 129
+0046         ?C0002:
+0046 E006          MOV       R6,#00H
+0048 E6F79643      MOV       R7,#04396H
+004C F04C          MOV       R4,R12
+004E F05D          MOV       R5,R13
+0050 CA000000 E    CALLA     cc_UC,?C_FPCMP
+0054 BDEC          JMPR      cc_SLE,?C0004
+0056         ?C0003:
+                                           ; SOURCE LINE # 130
+0056 CB00          RET       
+             ; FUNCTION main (END    RMASK = @0x7FFE)
+
+
+C166 COMPILER V6.17, VORLAGE_FUR_AUFGABE_1                                                 06/19/2017 15:25:53 PAGE 6   
+
+
+MODULE INFORMATION:   INITIALIZED  UNINITIALIZED
+  CODE SIZE        =          88     --------
+  NEAR-CONST SIZE  =    --------     --------
+  FAR-CONST SIZE   =    --------     --------
+  HUGE-CONST SIZE  =    --------     --------
+  XHUGE-CONST SIZE =    --------     --------
+  NEAR-DATA SIZE   =    --------     --------
+  FAR-DATA SIZE    =    --------     --------
+  XHUGE-DATA SIZE  =    --------     --------
+  IDATA-DATA SIZE  =    --------     --------
+  SDATA-DATA SIZE  =    --------     --------
+  BDATA-DATA SIZE  =    --------     --------
+  HUGE-DATA SIZE   =    --------     --------
+  BIT SIZE         =    --------     --------
+  INIT'L SIZE      =    --------     --------
+END OF MODULE INFORMATION.
+
+
+C166 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,3 @@
+﻿  Application.cpp
+c:\users\hp\hochschule\2.semester\softwarelabor\übungen\softwarelabor\regulaere_ausdruecke\orakel.h(49): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+c:\users\hp\hochschule\2.semester\softwarelabor\übungen\softwarelabor\regulaere_ausdruecke\application.cpp(12): error C2078: Zu viele Initialisierungen

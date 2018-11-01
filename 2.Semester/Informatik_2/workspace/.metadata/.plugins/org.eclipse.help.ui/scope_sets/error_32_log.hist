@@ -1,0 +1,4 @@
+#Wed Mar 22 08:38:03 CET 2017
+__DEFAULT__=false
+org.eclipse.help.ui.localSearch.master=true
+expression=error log

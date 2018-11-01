@@ -1,0 +1,193 @@
+C166 COMPILER V6.17, AUFGABE2                                                              06/19/2017 18:08:56 PAGE 1   
+
+
+C166 COMPILER V6.17, COMPILATION OF MODULE AUFGABE2
+OBJECT MODULE PLACED IN Aufgabe2.OBJ
+COMPILER INVOKED BY: C:\Keil\C166\BIN\C166.EXE Aufgabe2.c MODV2 BROWSE FLOAT64 MODV2 DEBUG CODE
+
+ stmt lvl     source
+
+    1         #include "EigenerHeader.h"
+    2         
+    3         #define OUTPUTMASKE 0x0080
+    4         #define INPUTMASKE      0x0000
+    5         
+    6         #define T_1             P0_IN_P2
+    7         #define T_2             P0_IN_P3
+    8         #define S_1                     P0_IN_P0
+    9         #define S_2                     P0_IN_P1
+   10         #define LED1_ROT        P0_OUT_P4
+   11         #define LED2_GELB       P0_OUT_P5
+   12         #define LED3_GRUEN  P0_OUT_P6
+   13         
+   14         void aufgabe1 () {
+   15  1      
+   16  1              if(!(P0_IN & T_1) ) {
+   17  2                      P0_OUT &= ~LED1_ROT;
+   18  2              } else {
+   19  2                      P0_OUT |= LED1_ROT;
+   20  2              }
+   21  1      
+   22  1              if(!(P0_IN & T_2) ) {
+   23  2                      P0_OUT &= ~LED2_GELB;
+   24  2              } else {
+   25  2                      P0_OUT |= LED2_GELB;
+   26  2              }
+   27  1      
+   28  1      }
+   29         
+   30         
+   31         void main (void) {
+   32  1      
+   33  1              portinit();
+   34  1      
+   35  1              while(1) {
+   36  2              
+   37  2                      if((!(P0_IN & T_1) ) && (P0_IN & S_1)) {
+   38  3                              P0_OUT &= ~LED1_ROT;
+   39  3                      } else {
+   40  3                              P0_OUT |= LED1_ROT;
+   41  3                      }
+   42  2      
+   43  2                      if((!(P0_IN & T_2) ) && (P0_IN & S_2)) {
+   44  3                              P0_OUT &= ~LED2_GELB;
+   45  3                      } else {
+   46  3                              P0_OUT |= LED2_GELB;
+   47  3                      }                       
+   48  2              }
+   49  1      }
+   50         
+   51         void portinit() {
+   52  1              // Outputs initialisieren
+   53  1              P0_IOCR04 = OUTPUTMASKE;
+   54  1              P0_IOCR05 = OUTPUTMASKE;
+   55  1              P0_IOCR06 = OUTPUTMASKE;
+C166 COMPILER V6.17, AUFGABE2                                                              06/19/2017 18:08:56 PAGE 2   
+
+   56  1              P0_IOCR07 = OUTPUTMASKE;
+   57  1              
+   58  1              //Inputs initialisieren
+   59  1              P0_IOCR00 = INPUTMASKE;
+   60  1              P0_IOCR01 = INPUTMASKE;
+   61  1              P0_IOCR02 = INPUTMASKE;
+   62  1              P0_IOCR03 = INPUTMASKE; 
+   63  1      }
+C166 COMPILER V6.17, AUFGABE2                                                              06/19/2017 18:08:56 PAGE 3   
+
+ASSEMBLY LISTING OF GENERATED OBJECT CODE
+
+
+             ; FUNCTION aufgabe1 (BEGIN  RMASK = @0x4010)
+                                           ; SOURCE LINE # 14
+                                           ; SOURCE LINE # 16
+0000 F2F480FF      MOV       R4,0FF80H
+0004 8AF40320      JB        R4.2,?C0001
+                                           ; SOURCE LINE # 17
+0008 66D1EFFF      AND       __Sfr?FFA2,#0FFEFH
+                                           ; SOURCE LINE # 18
+000C 0D02          JMPR      cc_UC,?C0002
+000E         ?C0001:
+                                           ; SOURCE LINE # 19
+000E 76D11000      OR        __Sfr?FFA2,#010H
+                                           ; SOURCE LINE # 20
+0012         ?C0002:
+                                           ; SOURCE LINE # 22
+0012 F2F480FF      MOV       R4,0FF80H
+0016 8AF40330      JB        R4.3,?C0003
+                                           ; SOURCE LINE # 23
+001A 66D1DFFF      AND       __Sfr?FFA2,#0FFDFH
+                                           ; SOURCE LINE # 24
+001E CB00          RET       
+0020         ?C0003:
+                                           ; SOURCE LINE # 25
+0020 76D12000      OR        __Sfr?FFA2,#020H
+                                           ; SOURCE LINE # 26
+0024         ?C0004:
+                                           ; SOURCE LINE # 28
+0024 CB00          RET       
+             ; FUNCTION aufgabe1 (END    RMASK = @0x4010)
+
+             ; FUNCTION main (BEGIN  RMASK = @0x7FFF)
+                                           ; SOURCE LINE # 31
+                                           ; SOURCE LINE # 33
+0026 BB1B          CALLR     portinit
+                                           ; SOURCE LINE # 35
+0028         ?C0007:
+                                           ; SOURCE LINE # 37
+0028 F2F480FF      MOV       R4,0FF80H
+002C 8AF40720      JB        R4.2,?C0009
+0030 F2F480FF      MOV       R4,0FF80H
+0034 9AF40300      JNB       R4.0,?C0009
+                                           ; SOURCE LINE # 38
+0038 66D1EFFF      AND       __Sfr?FFA2,#0FFEFH
+                                           ; SOURCE LINE # 39
+003C 0D02          JMPR      cc_UC,?C0010
+003E         ?C0009:
+                                           ; SOURCE LINE # 40
+003E 76D11000      OR        __Sfr?FFA2,#010H
+                                           ; SOURCE LINE # 41
+0042         ?C0010:
+                                           ; SOURCE LINE # 43
+0042 F2F480FF      MOV       R4,0FF80H
+0046 8AF40730      JB        R4.3,?C0011
+004A F2F480FF      MOV       R4,0FF80H
+004E 9AF40310      JNB       R4.1,?C0011
+                                           ; SOURCE LINE # 44
+0052 66D1DFFF      AND       __Sfr?FFA2,#0FFDFH
+                                           ; SOURCE LINE # 45
+0056 0DE8          JMPR      cc_UC,?C0007
+C166 COMPILER V6.17, AUFGABE2                                                              06/19/2017 18:08:56 PAGE 4   
+
+0058         ?C0011:
+                                           ; SOURCE LINE # 46
+0058 76D12000      OR        __Sfr?FFA2,#020H
+                                           ; SOURCE LINE # 47
+                                           ; SOURCE LINE # 48
+005C 0DE5          JMPR      cc_UC,?C0007
+             ; FUNCTION main (END    RMASK = @0x7FFF)
+
+             ; FUNCTION portinit (BEGIN  RMASK = @0x4010)
+                                           ; SOURCE LINE # 51
+                                           ; SOURCE LINE # 53
+005E E6F48000      MOV       R4,#080H
+0062 F6F408E8      MOV       0E808H,R4
+                                           ; SOURCE LINE # 54
+0066 F6F40AE8      MOV       0E80AH,R4
+                                           ; SOURCE LINE # 55
+006A F6F40CE8      MOV       0E80CH,R4
+                                           ; SOURCE LINE # 56
+006E F6F40EE8      MOV       0E80EH,R4
+                                           ; SOURCE LINE # 59
+0072 E004          MOV       R4,#00H
+0074 F6F400E8      MOV       0E800H,R4
+                                           ; SOURCE LINE # 60
+0078 F6F402E8      MOV       0E802H,R4
+                                           ; SOURCE LINE # 61
+007C F6F404E8      MOV       0E804H,R4
+                                           ; SOURCE LINE # 62
+0080 F6F406E8      MOV       0E806H,R4
+                                           ; SOURCE LINE # 63
+0084 CB00          RET       
+             ; FUNCTION portinit (END    RMASK = @0x4010)
+
+
+
+MODULE INFORMATION:   INITIALIZED  UNINITIALIZED
+  CODE SIZE        =         134     --------
+  NEAR-CONST SIZE  =    --------     --------
+  FAR-CONST SIZE   =    --------     --------
+  HUGE-CONST SIZE  =    --------     --------
+  XHUGE-CONST SIZE =    --------     --------
+  NEAR-DATA SIZE   =    --------     --------
+  FAR-DATA SIZE    =    --------     --------
+  XHUGE-DATA SIZE  =    --------     --------
+  IDATA-DATA SIZE  =    --------     --------
+  SDATA-DATA SIZE  =    --------     --------
+  BDATA-DATA SIZE  =    --------     --------
+  HUGE-DATA SIZE   =    --------     --------
+  BIT SIZE         =    --------     --------
+  INIT'L SIZE      =    --------     --------
+END OF MODULE INFORMATION.
+
+
+C166 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="checkBox_toDo" type="id" />
+    <item name="toDo_list_item_title" type="id" />
+    <item name="list_view_todos" type="id" />
+    <item name="TestText" type="id" />
+    <item name="Clear_Button" type="id" />
+    <item name="Delete_Button" type="id" />
+    <item name="ToDo_checkedText" type="id" />
+</resources>

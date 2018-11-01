@@ -1,0 +1,17 @@
+JDF B
+// Created by Version 1.6 
+PROJECT parity
+DESIGN parity Normal
+DEVKIT GAL16V8D-20QPI
+ENTRY Schematic/VHDL
+MODULE parity.vhd
+MODSTYLE Not1 Normal
+MODSTYLE Or8 Normal
+MODSTYLE And4 Normal
+MODSTYLE And8 Normal
+MODSTYLE Parity Normal
+STIMULUS Parity tparity.vhd
+MODSTYLE Or4 Normal
+SYNTHESIS_TOOL Synplify
+SIMULATOR_TOOL ActiveHDL
+TOPMODULE Parity

@@ -1,0 +1,241 @@
+C166 COMPILER V6.17, T3POWER                                                               06/19/2017 18:56:54 PAGE 1   
+
+
+C166 COMPILER V6.17, COMPILATION OF MODULE T3POWER
+OBJECT MODULE PLACED IN t3power.OBJ
+COMPILER INVOKED BY: C:\Keil\C166\BIN\C166.EXE t3power.c MODV2 BROWSE FLOAT64 MODV2 DEBUG CODE
+
+ stmt lvl     source
+
+    1         #include "XE164F_HS.h"
+    2         
+    3         #define VT128           0x4
+    4         #define T3_TIMER        0x0
+    5         
+    6         void portinit() {
+    7  1              // Outputs initialisieren
+    8  1              P0_IOCR04 = OUTPUTMASKE;
+    9  1              P0_IOCR05 = OUTPUTMASKE;
+   10  1              P0_IOCR06 = OUTPUTMASKE;
+   11  1              P0_IOCR07 = OUTPUTMASKE;
+   12  1              
+   13  1              //Inputs initialisieren
+   14  1              P0_IOCR00 = INPUTMASKE;
+   15  1              P0_IOCR01 = INPUTMASKE;
+   16  1              P0_IOCR02 = INPUTMASKE;
+   17  1              P0_IOCR03 = INPUTMASKE; 
+   18  1      }
+   19         
+   20         
+   21         void t3power(void)
+   22         {
+   23  1        unsigned int PWD, temp;
+   24  1       
+   25  1          SCU_SLC = 0xAAAA;            
+   26  1          SCU_SLC = 0x5554;              
+   27  1      
+   28  1          PWD = SCU_SLS & 0x00FF;
+   29  1          PWD = (~PWD) & 0x00FF;
+   30  1      
+   31  1          SCU_SLC = 0x9600 | PWD;    
+   32  1          SCU_SLC = 0x0000;                
+   33  1      
+   34  1                      
+   35  1              GPT12E_KSCCFG = 3;
+   36  1              temp = GPT12E_KSCCFG;
+   37  1      
+   38  1      }
+   39         
+   40         
+   41         void t3init(void) {
+   42  1              t3power();
+   43  1              T3CON =  VT128          // vorteiler
+   44  1                              |T3_TIMER       // timer mode
+   45  1                              |T3UD           // count down
+   46  1                              |T3OE;          // Pin frei
+   47  1      
+   48  1              T3CON |= T3R; // starte T3
+   49  1              
+   50  1      }
+   51         
+   52         
+   53         void main(void) {
+   54  1              portinit();
+   55  1              t3init();
+C166 COMPILER V6.17, T3POWER                                                               06/19/2017 18:56:54 PAGE 2   
+
+   56  1      
+   57  1              while(1) {
+   58  2              
+   59  2              /*if(T3CON & T3OTL) {
+   60  2                      P0_OUT &= ~LED3_GRUEN;
+   61  2              } */
+   62  2      
+   63  2              if(!(P0_IN & T_1) ) {
+   64  3                      P0_OUT &= ~LED1_ROT;
+   65  3              } else {
+   66  3                      P0_OUT |= LED1_ROT;
+   67  3              }
+   68  2      
+   69  2              if(!(P0_IN & T_2) ) {
+   70  3                      P0_OUT &= ~LED2_GELB;
+   71  3              } else {
+   72  3                      P0_OUT |= LED2_GELB;
+   73  3              }
+   74  2              }
+   75  1      }
+C166 COMPILER V6.17, T3POWER                                                               06/19/2017 18:56:54 PAGE 3   
+
+ASSEMBLY LISTING OF GENERATED OBJECT CODE
+
+
+             ; FUNCTION portinit (BEGIN  RMASK = @0x4010)
+                                           ; SOURCE LINE # 6
+                                           ; SOURCE LINE # 8
+0000 E6F48000      MOV       R4,#080H
+0004 F6F408E8      MOV       0E808H,R4
+                                           ; SOURCE LINE # 9
+0008 F6F40AE8      MOV       0E80AH,R4
+                                           ; SOURCE LINE # 10
+000C F6F40CE8      MOV       0E80CH,R4
+                                           ; SOURCE LINE # 11
+0010 F6F40EE8      MOV       0E80EH,R4
+                                           ; SOURCE LINE # 14
+0014 E004          MOV       R4,#00H
+0016 F6F400E8      MOV       0E800H,R4
+                                           ; SOURCE LINE # 15
+001A F6F402E8      MOV       0E802H,R4
+                                           ; SOURCE LINE # 16
+001E F6F404E8      MOV       0E804H,R4
+                                           ; SOURCE LINE # 17
+0022 F6F406E8      MOV       0E806H,R4
+                                           ; SOURCE LINE # 18
+0026 CB00          RET       
+             ; FUNCTION portinit (END    RMASK = @0x4010)
+
+             ; FUNCTION t3power (BEGIN  RMASK = @0x4030)
+                                           ; SOURCE LINE # 21
+                                           ; SOURCE LINE # 22
+                                           ; SOURCE LINE # 25
+0028 D190          EXTR      #02H
+002A E660AAAA      MOV       SCU_SLC,#0AAAAH
+                                           ; SOURCE LINE # 26
+002E E6605455      MOV       SCU_SLC,#05554H
+                                           ; SOURCE LINE # 28
+0032 F2F5C2F0      MOV       R5,SCU_SLS
+0036 66F5FF00      AND       R5,#0FFH
+;---- Variable 'PWD' assigned to Register 'R5' ----
+                                           ; SOURCE LINE # 29
+003A F045          MOV       R4,R5
+003C 9140          CPL       R4
+003E F054          MOV       R5,R4
+0040 66F5FF00      AND       R5,#0FFH
+                                           ; SOURCE LINE # 31
+0044 F045          MOV       R4,R5
+0046 76F40096      OR        R4,#09600H
+004A F6F4C0F0      MOV       SCU_SLC,R4
+                                           ; SOURCE LINE # 32
+004E D180          EXTR      #01H
+0050 E6600000      MOV       SCU_SLC,#00H
+                                           ; SOURCE LINE # 35
+0054 E60E0300      MOV       GPT12E_KSCCFG,#03H
+                                           ; SOURCE LINE # 36
+0058 F2F41CFE      MOV       R4,GPT12E_KSCCFG
+                                           ; SOURCE LINE # 38
+005C CB00          RET       
+             ; FUNCTION t3power (END    RMASK = @0x4030)
+
+             ; FUNCTION t3init (BEGIN  RMASK = @0x4030)
+                                           ; SOURCE LINE # 41
+                                           ; SOURCE LINE # 42
+C166 COMPILER V6.17, T3POWER                                                               06/19/2017 18:56:54 PAGE 4   
+
+005E BBE4          CALLR     t3power
+                                           ; SOURCE LINE # 46
+0060 4AA1F570      BMOV      R5.0,T3UD
+0064 6851          AND       R5,#01H
+0066 7854          OR        R5,#04H
+0068 4AA1F490      BMOV      R4.0,T3OE
+006C 6841          AND       R4,#01H
+006E 7045          OR        R4,R5
+0070 F6F442FF      MOV       T3CON,R4
+                                           ; SOURCE LINE # 48
+0074 4AA1F460      BMOV      R4.0,T3R
+0078 6841          AND       R4,#01H
+007A 74F442FF      OR        T3CON,R4
+                                           ; SOURCE LINE # 50
+007E CB00          RET       
+             ; FUNCTION t3init (END    RMASK = @0x4030)
+
+             ; FUNCTION main (BEGIN  RMASK = @0x4030)
+                                           ; SOURCE LINE # 53
+                                           ; SOURCE LINE # 54
+0080 BBBF          CALLR     portinit
+                                           ; SOURCE LINE # 55
+0082 BBED          CALLR     t3init
+                                           ; SOURCE LINE # 57
+0084         ?C0003:
+                                           ; SOURCE LINE # 63
+0084 4AC0F520      BMOV      R5.0,P0_IN_P2
+0088 6851          AND       R5,#01H
+008A F2F480FF      MOV       R4,P0_IN
+008E 6045          AND       R4,R5
+0090 3D06          JMPR      cc_NZ,?C0005
+                                           ; SOURCE LINE # 64
+0092 3AD1F440      BMOVN     R4.0,P0_OUT_P4
+0096 6841          AND       R4,#01H
+0098 64F4A2FF      AND       P0_OUT,R4
+                                           ; SOURCE LINE # 65
+009C 0D05          JMPR      cc_UC,?C0006
+009E         ?C0005:
+                                           ; SOURCE LINE # 66
+009E 4AD1F440      BMOV      R4.0,P0_OUT_P4
+00A2 6841          AND       R4,#01H
+00A4 74F4A2FF      OR        P0_OUT,R4
+                                           ; SOURCE LINE # 67
+00A8         ?C0006:
+                                           ; SOURCE LINE # 69
+00A8 4AC0F530      BMOV      R5.0,P0_IN_P3
+00AC 6851          AND       R5,#01H
+00AE F2F480FF      MOV       R4,P0_IN
+00B2 6045          AND       R4,R5
+00B4 3D06          JMPR      cc_NZ,?C0007
+                                           ; SOURCE LINE # 70
+00B6 3AD1F450      BMOVN     R4.0,P0_OUT_P5
+00BA 6841          AND       R4,#01H
+00BC 64F4A2FF      AND       P0_OUT,R4
+                                           ; SOURCE LINE # 71
+00C0 0DE1          JMPR      cc_UC,?C0003
+00C2         ?C0007:
+                                           ; SOURCE LINE # 72
+00C2 4AD1F450      BMOV      R4.0,P0_OUT_P5
+00C6 6841          AND       R4,#01H
+00C8 74F4A2FF      OR        P0_OUT,R4
+                                           ; SOURCE LINE # 73
+C166 COMPILER V6.17, T3POWER                                                               06/19/2017 18:56:54 PAGE 5   
+
+                                           ; SOURCE LINE # 74
+00CC 0DDB          JMPR      cc_UC,?C0003
+             ; FUNCTION main (END    RMASK = @0x4030)
+
+
+
+MODULE INFORMATION:   INITIALIZED  UNINITIALIZED
+  CODE SIZE        =         206     --------
+  NEAR-CONST SIZE  =    --------     --------
+  FAR-CONST SIZE   =    --------     --------
+  HUGE-CONST SIZE  =    --------     --------
+  XHUGE-CONST SIZE =    --------     --------
+  NEAR-DATA SIZE   =    --------     --------
+  FAR-DATA SIZE    =    --------     --------
+  XHUGE-DATA SIZE  =    --------     --------
+  IDATA-DATA SIZE  =    --------     --------
+  SDATA-DATA SIZE  =    --------     --------
+  BDATA-DATA SIZE  =    --------     --------
+  HUGE-DATA SIZE   =    --------     --------
+  BIT SIZE         =    --------     --------
+  INIT'L SIZE      =    --------     --------
+END OF MODULE INFORMATION.
+
+
+C166 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

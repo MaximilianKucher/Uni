@@ -1,0 +1,194 @@
+<html>
+<body>
+<pre>
+<h1>µVision3 Build Log</h1>
+<h2>Project:</h2>
+F:\Hochschule\2.Semester\TechnischeInformatik_2\Digitallabor\Versuch_3\Projekt_03\PRO_3.uv2
+Project File Date:  05/15/2017
+
+<h2>Output:</h2>
+Build target 'Target 1'
+Target has no object modules
+Target not created
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=18(near=18) const=0(near=0) code=54
+"PRO_3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling vorlage.a66...
+assembling Aufgabe_2.a66...
+linking...
+*** ERROR L101: SECTION COMBINATION ERROR
+    SECTION: DATENSPEICHER
+    CLASS:   
+    MODULE:  Aufgabe_2.obj (AUFGABE_2)
+*** ERROR L101: SECTION COMBINATION ERROR
+    SECTION: PROGRAMME
+    CLASS:   
+    MODULE:  Aufgabe_2.obj (AUFGABE_2)
+*** ERROR L133: MULTIPLE TGROUP DEFINITIONS WITH SAME NAME
+    MODULE:  Aufgabe_2.obj (AUFGABE_2)
+    TGROUP:  <unnamed>
+*** ERROR L120: CONTENT BELONGS TO ERRONEOUS SECTION
+    SECTION: DATENSPEICHER
+    CLASS:   
+*** ERROR L120: CONTENT BELONGS TO ERRONEOUS SECTION
+    SECTION: DATENSPEICHER
+    CLASS:   
+*** ERROR L120: CONTENT BELONGS TO ERRONEOUS SECTION
+    SECTION: PROGRAMME
+    CLASS:   
+*** ERROR L120: CONTENT BELONGS TO ERRONEOUS SECTION
+    SECTION: PROGRAMME
+    CLASS:   
+*** ERROR L119: REFERENCE MADE TO ERRONEOUS SECTION
+    SECTION: PROGRAMME
+    CLASS:   
+    MODULE:  vorlage.obj (VORLAGE)
+    ADDRESS: 0010H
+*** ERROR L120: CONTENT BELONGS TO ERRONEOUS SECTION
+    SECTION: PROGRAMME
+    CLASS:   
+*** ERROR L120: CONTENT BELONGS TO ERRONEOUS SECTION
+    SECTION: DATENSPEICHER
+    CLASS:   
+*** ERROR L120: CONTENT BELONGS TO ERRONEOUS SECTION
+    SECTION: DATENSPEICHER
+    CLASS:   
+*** ERROR L120: CONTENT BELONGS TO ERRONEOUS SECTION
+    SECTION: PROGRAMME
+    CLASS:   
+*** ERROR L120: CONTENT BELONGS TO ERRONEOUS SECTION
+    SECTION: PROGRAMME
+    CLASS:   
+*** ERROR L119: REFERENCE MADE TO ERRONEOUS SECTION
+    SECTION: PROGRAMME
+    CLASS:   
+    MODULE:  Aufgabe_2.obj (AUFGABE_2)
+    ADDRESS: 0010H
+*** ERROR L120: CONTENT BELONGS TO ERRONEOUS SECTION
+    SECTION: PROGRAMME
+    CLASS:   
+Program Size: data=18(near=18) const=0(near=0) code=54
+Target not created
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=18(near=18) const=0(near=0) code=54
+"PRO_3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=28(near=28) const=0(near=0) code=54
+"PRO_3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling vorlage.a66...
+vorlage.a66(88): error A57: ILLEGAL REGISTER
+vorlage.a66(90): error A57: ILLEGAL REGISTER
+Target not created
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=28(near=28) const=0(near=0) code=66
+"PRO_3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=28(near=28) const=0(near=0) code=62
+"PRO_3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=28(near=28) const=0(near=0) code=94
+"PRO_3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=28(near=28) const=0(near=0) code=86
+"PRO_3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=28(near=28) const=0(near=0) code=86
+"PRO_3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=28(near=28) const=0(near=0) code=84
+"PRO_3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=28(near=28) const=0(near=0) code=84
+"PRO_3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=28(near=28) const=0(near=0) code=120
+"PRO_3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=36(near=36) const=0(near=0) code=126
+"PRO_3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=36(near=36) const=0(near=0) code=118
+"PRO_3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=36(near=36) const=0(near=0) code=130
+"PRO_3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=36(near=36) const=0(near=0) code=132
+"PRO_3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=36(near=36) const=0(near=0) code=132
+"PRO_3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=36(near=36) const=0(near=0) code=142
+"PRO_3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=36(near=36) const=0(near=0) code=156
+"PRO_3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=36(near=36) const=0(near=0) code=170
+"PRO_3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=36(near=36) const=0(near=0) code=170
+"PRO_3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=26(near=26) const=0(near=0) code=80
+"PRO_3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=36(near=36) const=0(near=0) code=80
+"PRO_3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=36(near=36) const=0(near=0) code=162
+"PRO_3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling vorlage.a66...
+linking...
+Program Size: data=36(near=36) const=0(near=0) code=178
+"PRO_3" - 0 Error(s), 0 Warning(s).

@@ -1,0 +1,127 @@
+C166 COMPILER V6.17, VORLAGE_FUR_AUFGABE_1                                                 06/19/2017 14:01:45 PAGE 1   
+
+
+C166 COMPILER V6.17, COMPILATION OF MODULE VORLAGE_FUR_AUFGABE_1
+OBJECT MODULE PLACED IN .\Vorlage fur Aufgabe 1.obj
+COMPILER INVOKED BY: C:\Keil\C166\BIN\C166.EXE ..\Vorlage fur Aufgabe 1.c MODV2 BROWSE FLOAT64 MODV2 DEFINE(TEIL_A) DEBU
+                    -G CODE OBJECT(.\Vorlage fur Aufgabe 1.obj) 
+
+ stmt lvl     source
+
+    1         
+    2         /***********************************************************************************************
+    3         * Mit dieser Vorlage können Sie die einzelnen Teilaufgaben bei der Abnahme schnell anwählen    *
+    4         * Der Quelltext von Aufgabe a ist schon eingetragen. Für die anderen Teilaufgaben kopieren Sie *
+    5         * diesen Quelltext in die entsprechenden Bereiche der Vorlage und modifizieren ihn.            *
+    6         *                                                                                              *
+    7         * Welcher Quelltext dann übersetzt werden soll, bestimmen Sie in den Target Options / C166     *
+    8         * Dort tragen Sie im Feld "Define:" einfach "TEIL_A" oder "TEIL_B" oder "TEIL_C" usw. ein.     *
+    9         ***********************************************************************************************/
+   10         
+   11         
+   12         #ifdef TEIL_A //Teilaufgabe a)
+   13         
+   14         void main(void) {
+   15  1              int fahr, celsius;
+   16  1              int lower, upper,step;
+   17  1      
+   18  1              lower = 0;
+   19  1              upper = 300;
+   20  1              step = 20;
+   21  1      
+   22  1      
+   23  1              fahr = lower;
+   24  1              while (fahr <= upper) {
+   25  2                      celsius = 5 * (fahr-32) / 9;
+   26  2                      fahr = fahr + step;
+   27  2              }
+   28  1      }
+   29         
+   30         #endif //Teilaufgabe a)
+   31         
+   32         
+   33         
+   34         #ifdef TEIL_B  //Teilaufgabe b)
+              
+              #endif //Teilaufgabe b)
+   37         
+   38         
+   39         
+   40         #ifdef TEIL_C //Teilaufgabe c)
+              
+              #endif //Teilaufgabe c)
+   43         
+   44         
+   45         
+   46         #ifdef TEIL_D1 //Teilaufgabe d) mit long
+              
+              #endif //Teilaufgabe d) mit long
+   49         
+   50         
+   51         
+   52         #ifdef TEIL_D2 //Teilaufgabe d) mit float
+              
+              #endif //Teilaufgabe d) mit float
+C166 COMPILER V6.17, VORLAGE_FUR_AUFGABE_1                                                 06/19/2017 14:01:45 PAGE 2   
+
+   55         
+   56         
+   57         
+   58         #ifdef TEIL_D3 //Teilaufgabe d) mit double
+              
+              #endif //Teilaufgabe d) mit double
+   61         
+   62         
+   63         
+   64         #ifdef TEIL_E //Teilaufgabe e)
+              /* Kleiner Tipp: Wann verwendet man eine while und wann eine for Schleife? */
+              #endif //Teilaufgabe e)
+   67         
+   68         
+C166 COMPILER V6.17, VORLAGE_FUR_AUFGABE_1                                                 06/19/2017 14:01:45 PAGE 3   
+
+ASSEMBLY LISTING OF GENERATED OBJECT CODE
+
+
+             ; FUNCTION main (BEGIN  RMASK = @0x4020)
+                                           ; SOURCE LINE # 14
+                                           ; SOURCE LINE # 18
+                                           ; SOURCE LINE # 19
+                                           ; SOURCE LINE # 20
+                                           ; SOURCE LINE # 23
+0000 E005          MOV       R5,#00H
+;---- Variable 'fahr' assigned to Register 'R5' ----
+                                           ; SOURCE LINE # 24
+0002         ?C0003:
+                                           ; SOURCE LINE # 25
+                                           ; SOURCE LINE # 26
+0002 06F51400      ADD       R5,#014H
+                                           ; SOURCE LINE # 27
+0006 46F52C01      CMP       R5,#012CH
+000A BDFB          JMPR      cc_SLE,?C0003
+000C         ?C0002:
+                                           ; SOURCE LINE # 28
+000C CB00          RET       
+             ; FUNCTION main (END    RMASK = @0x4020)
+
+
+
+MODULE INFORMATION:   INITIALIZED  UNINITIALIZED
+  CODE SIZE        =          14     --------
+  NEAR-CONST SIZE  =    --------     --------
+  FAR-CONST SIZE   =    --------     --------
+  HUGE-CONST SIZE  =    --------     --------
+  XHUGE-CONST SIZE =    --------     --------
+  NEAR-DATA SIZE   =    --------     --------
+  FAR-DATA SIZE    =    --------     --------
+  XHUGE-DATA SIZE  =    --------     --------
+  IDATA-DATA SIZE  =    --------     --------
+  SDATA-DATA SIZE  =    --------     --------
+  BDATA-DATA SIZE  =    --------     --------
+  HUGE-DATA SIZE   =    --------     --------
+  BIT SIZE         =    --------     --------
+  INIT'L SIZE      =    --------     --------
+END OF MODULE INFORMATION.
+
+
+C166 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

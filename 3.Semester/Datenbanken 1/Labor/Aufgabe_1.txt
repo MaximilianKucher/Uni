@@ -1,0 +1,45 @@
+Datenbanken 1 Labor
+
+Aufgabe 1:
+1.1) 
+Auftrag 2: 	Kunde ist "Maier Ingrid",
+	   	zuständiger Mitarbeiter ist "Johanna Köster",
+		Vorgesetzte(r) des Mitarbeiters ist "Maria Forster"
+
+1.2) 
+SELECT *
+FROM Lager
+WHERE Bestand >= 1
+ORDER BY Bestand ASC
+
+1.3)
+SELECT DISTINCT Teilnr
+FROM Lieferung
+ORDER BY Teilnr DESC
+
+1.4)
+SELECT Teilnr AS Teilnummer,
+Bezeichnung AS Name,
+Preis AS Bruttopreis
+FROM Teilestamm
+WHERE Preis > 30
+
+1.5)
+SELECT Einzelteilnr
+FROM Teilestruktur
+WHERE Oberteilnr LIKE '300001'
+AND Anzahl > 100
+
+1.6)
+SELECT Bezeichnung AS Name,
+Preis * 1.178545 AS Preis_In_Dollar
+FROM Teilestamm
+WHERE Farbe = 'blau'
+
+1.7)
+SELECT DISTINCT Bezeichnung
+FROM Teilestamm
+JOIN Lager ON Teilestamm.Teilnr = Lager.Teilnr
+JOIN Auftragsposten ON Teilestamm.Teilnr = Auftragsposten.Teilnr
+JOIN Teilestruktur ON Teilestamm.Teilnr = Teilestruktur.Oberteilnr
+Where Lager.Bestand > 0

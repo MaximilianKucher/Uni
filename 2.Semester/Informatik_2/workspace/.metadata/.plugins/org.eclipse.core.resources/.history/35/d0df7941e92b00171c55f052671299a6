@@ -1,0 +1,17 @@
+
+public class Wurzeln {
+
+  public static void main(String[] args) {
+    
+
+  }
+  
+  private double calculateRoot(int k, double x) {
+    
+    double solution = 0.0;
+    
+    return solution;
+    
+  }
+
+}

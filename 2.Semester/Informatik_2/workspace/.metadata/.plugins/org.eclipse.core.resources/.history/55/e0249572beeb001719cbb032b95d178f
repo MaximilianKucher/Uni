@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns="http://www.example.org/Rechneruebung4"
+			targetNamespace="http://www.example.org/Rechneruebung4"
+			elementFormDefault="qualified">
+		
+	<xs:element name="RECHNUNGEN">
+        <xs:complexType>
+			<xs:sequence>
+				<xs:element name="RECHNUNG" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NAME_UND_ANSCHRIFT_LEISTENDER_UNTERNEHMER">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="NAME" type="xs:string" />
+										<xs:element name="STRASSE" type="xs:string" />
+										<xs:element name="ADRESSE" type="xs:string" />
+										<xs:element name="TELEFONNUMMER" type="xs:string" minOccurs="0"/>
+										<xs:element name="FAX" type="xs:string" minOccurs="0" />
+										<xs:element name="E-MAIL_ADRESSE" type="xs:string" minOccurs="0" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="NAME_UND_ANSCHRIFT_LEISTUNGSEMPFAENGER">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ANREDE" type="xs:string" minOccurs="0" />
+										<xs:element name="NAME" type="xs:string" />
+										<xs:element name="STRASSE" type="xs:string" />
+										<xs:element name="ADRESSE" type="xs:string" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="LEISTUNGEN">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="LEISTUNG" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="NUMMER" type="xs:unsignedInt" />
+													<xs:element name="WAEHRUNG">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:enumeration value="EUR" />
+																<xs:enumeration value="USD" />
+																<xs:enumeration value="AUD" />
+																<xs:enumeration value="CHF" />
+																<xs:enumeration value="GBP" />
+																<xs:enumeration value="JPY" />
+															</xs:restriction>													
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="HANDELSUEBLICHER_NAME" type="xs:string" />
+													<xs:element name="ANZAHL" type="xs:unsignedInt" minOccurs="0" />
+													<xs:element name="DATUM" type="xs:date" minOccurs="0" />
+												</xs:sequence>
+												<xs:attribute name="MEHRWERTSTEUER" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="STEUERNUMMER" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="STEUERNUMMER_UNTERNEHMER" type="xs:unsignedLong"/>
+										<xs:element name="UMSATZSTEUER-IDENTIFIKATIONSNUMMER" type="xs:string"/>
+									</xs:choice>
+								</xs:complexType>	
+							</xs:element>
+							<xs:element name="AUSSTELLUNGSDATUM" type="xs:date" />
+							<xs:element name="RECHNUNGSNUMMER" type="xs:string" />
+							<xs:element name="ENTGELD_IN_EURO" type="xs:decimal" />
+							<xs:element name="ZAHLUNGSMOEGLICHKEITEN">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="DEUTSCHLANDINTERN" minOccurs="0">
+											<xs:complexType>
+												<xs:all>
+													<xs:element name="KONTOINHABER" type="xs:string" minOccurs="0"/>
+													<xs:element name="BANK" type="xs:string" minOccurs="0" />
+													<xs:element name="BIC" type="xs:string" minOccurs="0"/>
+													<xs:element name="IBAN" type="xs:string" minOccurs="0"/>
+													<xs:element name="KONTONUMMER" type="xs:unsignedLong" minOccurs="0"/>
+													<xs:element name="BLZ" type="xs:unsignedLong" minOccurs="0"/>
+												</xs:all>	
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="AUSSERHALB_DEUTSCHLANDS" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="KONTONUMMER" type="xs:unsignedInt" />
+													<xs:element name="BIC" type="xs:string" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="KRYPTOWAEHRUNG" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="BITCOIN_ADRESSE" type="xs:string" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="SONSTIGES" type="xs:string" minOccurs="0"></xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+    </xs:element>
+</xs:schema>

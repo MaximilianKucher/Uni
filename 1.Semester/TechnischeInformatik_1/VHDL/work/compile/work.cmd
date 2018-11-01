@@ -1,0 +1,1 @@
+-w -s "N:\VHDL\work\library.cfg"  -j "N:\VHDL\work\projlib.cfg"  -d "N:\VHDL\work\compile"   -work work  -O3 -e 100 "tparity.vhd"

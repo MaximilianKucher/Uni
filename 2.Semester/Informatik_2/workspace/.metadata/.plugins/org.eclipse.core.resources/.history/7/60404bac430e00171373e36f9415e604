@@ -1,0 +1,134 @@
+import java.lang.IllegalArgumentException;
+
+/**
+ * Ein Bruch bestehend aus Zähler und Nenner.
+ * Brüche können addiert, subtrahiert, multipliziert und dividiert werden.
+ * @author Max
+ *
+ */
+public class Bruch {
+  private long zaehler;
+  private long nenner;
+
+  public Bruch() {
+
+  }
+
+  /**
+   * Erzeugt einen neuen Bruch mit ganzzahligem Zähler und positivem ganzzahligem Nenner.
+   * @param zaehler ganzzahlig.
+   * @param nenner ganzzahlig und muss größer als 0 sein.
+   */
+  public Bruch(long zaehler, long nenner) {
+    if (nenner <= 0) {
+      throw new IllegalArgumentException("Der Nenner muss größer als 0 sein!");
+    } else {
+      this.setZaehler(zaehler); 
+      this.setNenner(nenner);
+    }
+  }
+  
+  /**
+   * Kürzt einen Bruch indem mit dem euklidischen Alogrithmus der ggT von Zähler
+   * und Nenner ermittelt wird und anschließend Zähler und Nenner durch den ggT
+   * geteilt werden.
+   */
+  public void kuerzen() {
+    long ggt = 1;
+    long rest = 1;
+    long a = this.zaehler;
+    long b = this.nenner;
+    
+    if (b > a) {
+      a = this.nenner;
+      b = this.zaehler;
+    }
+
+    do {
+      ggt = b;
+      rest = a % b;
+      a = b;
+      b = rest;
+    } while (rest != 0);
+    
+    this.setZaehler(this.zaehler / ggt);
+    this.setNenner(this.nenner / ggt);
+  }
+  
+  /**
+   * Addiert zwei Brüche indem sie zuerst auf den gleichen Nenner gebracht
+   * und danach die Zähler addiert werden. Dann wird gekürzt.
+   * @param bruch ein Bruchobjekt.
+   */
+  public void addieren(Bruch bruch) {
+    if (this.nenner == bruch.nenner) {
+      this.setZaehler(this.zaehler + bruch.zaehler);
+      this.kuerzen();
+    } else {
+      this.setNenner(this.nenner * bruch.nenner);
+      this.setZaehler(this.zaehler * bruch.nenner);
+      bruch.setNenner(bruch.nenner * this.nenner);
+      bruch.setZaehler(bruch.zaehler * this.nenner);
+      this.setZaehler(this.zaehler + bruch.zaehler);
+      this.kuerzen();
+    }
+  }
+  
+  /**
+   * Subtrahiert zwei Brüche voneinander indem sie zuerst auf den gleichen Nenner
+   * gebracht und danach die Zähler subtrahiert werden. Dann wird gekürzt.
+   * @param bruch ein Bruchobjekt.
+   */
+  public void subtrahieren(Bruch bruch) {
+    if (this.nenner == bruch.nenner) {
+      this.setZaehler(this.zaehler - bruch.zaehler);
+      this.kuerzen();
+    } else {
+      this.setNenner(this.nenner * bruch.nenner);
+      this.setZaehler(this.zaehler * bruch.nenner);
+      bruch.setNenner(bruch.nenner * this.nenner);
+      bruch.setZaehler(bruch.zaehler * this.nenner);
+      this.setZaehler(this.zaehler - bruch.zaehler);
+      this.kuerzen();
+    }
+  }
+  
+  /**
+   * Multipliziert zwei Brüche indem jweils die beiden Zähler bzw. Nenner
+   * miteinander multipliziert werden.
+   * @param bruch ein Bruchobjekt.
+   */
+  public void multiplizieren(Bruch bruch) {
+    this.setZaehler(this.zaehler * bruch.zaehler);
+    this.setNenner(this.nenner * bruch.nenner);
+    this.kuerzen();
+  }
+  
+  /**
+   * Dividiert einen Bruch durch einen anderen indem der Kehrbruch gebildet wird
+   * und die Brüche dann multipliziert werden.
+   * @param bruch ein Bruchobjekt.
+   */
+  public void dividieren(Bruch bruch) {
+    long speicher = bruch.zaehler;
+    bruch.setZaehler(bruch.nenner);
+    bruch.setNenner(speicher);
+    this.multiplizieren(bruch);
+  }
+
+  public long getZaehler() {
+    return this.zaehler;
+  }
+
+  public long getNenner() {
+    return this.nenner;
+  }
+
+  public void setZaehler(long zaehler) {
+    this.zaehler = zaehler;
+  }
+
+  public void setNenner(long nenner) {
+    this.nenner = nenner;
+  }
+}

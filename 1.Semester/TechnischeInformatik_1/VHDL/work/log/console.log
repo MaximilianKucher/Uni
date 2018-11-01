@@ -1,0 +1,59 @@
+adel -all
+# Library contents cleared.
+vcom parity.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints, code coverage, and assertion debug will not be available.
+# File: parity.vhd
+# Compile Entity "Not1"
+# Compile Architecture "Only" of Entity "Not1"
+# Compile Entity "And4"
+# Compile Architecture "Only" of Entity "And4"
+# Compile Entity "And8"
+# Compile Architecture "Only" of Entity "And8"
+# Compile Entity "Or4"
+# Compile Architecture "Only" of Entity "Or4"
+# Compile Entity "Or8"
+# Compile Architecture "Only" of Entity "Or8"
+# Compile Entity "Parity"
+# Compile Architecture "Behavioral" of Entity "Parity"
+# Compile Architecture "Structural" of Entity "Parity"
+# Compile Architecture "KNF" of Entity "Parity"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.3 [s]
+vcom tparity.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints, code coverage, and assertion debug will not be available.
+# File: tparity.vhd
+# Compile Entity "test_parity"
+# Compile Architecture "only" of Entity "test_parity"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+vsim +access +r test_parity
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# vsim: Stack memory: 32MB
+# vsim: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Lattice Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5986 kB (elbread=1023 elab2=4872 kernel=89 sdf=0)
+# KERNEL: ASDB file was created in location N:\VHDL\work\src\wave.asdb
+#  13:20, Montag, 7. November 2016
+#  Simulation has been initialized
+#  Selected Top-Level: test_parity (only)
+do -tcl tparityfa.udo
+add wave *
+# 5 signal(s) traced.
+run 1000 ns
+# KERNEL: stopped at time: 1 us
+#  Simulation has been stopped
