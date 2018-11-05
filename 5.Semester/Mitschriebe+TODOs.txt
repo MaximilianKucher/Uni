@@ -1,0 +1,126 @@
+Computergrafik:
+- labor mi 1. block /4. block ?
+- 2 elektronische zwischentests im ilias, 50% --> 5% für klausur
+- klausur 90 min
+- Hausaufgabe: überlegen sie 
+				rötliche farben empfinden wir als warm
+					farbtemperatur warmweißer LED ~3000K
+				bläuliche farben empfinden wir als kalt
+					farbtemperatur kaltweißer LED ~6000K
+				6000K ist wärmer als 3000K ..... why though ? 
+				--> Eiszeit. Menschen empfinden Feuer aus Holz (Rötlich) als warm und Eis/Schnee/Wasser (bläulich) als kalt
+				
+- instantreality.org für vrml player
+- www.wb3-project.de gast/gast geoinfromationssystem hier an der hs entstanden. Ansichten von Städten 
+
+				
+Computervision:
+
+
+
+
+
+
+ERP-Systeme: (Enterprise Resource Planning System)
+	epk modellierung! (klausur), zB Vertriebsprozess als epk modell...
+	Mandat im erp system ist ein konzern(Unternehmensgruppe)
+
+
+
+Datenbanken 2:
+
+
+
+
+Kommunikationsnetze 2:
+17.10.2018
+Parallele Übertragung von Datenströmen
+	Kontext: HTTP 1.0 s. KNetze 1, Da nach jedem Objekt die Verbindung abgebrochen wird kommen wir mit HTTP 1.0 auch nie aus dem slowstart raus!
+			 HTTP 1.1 - mit persistenter Verbindung (n Objekte werden übertragen: (n+1)*RTT + Summe(Ti) ) 
+					  - mit pipelining (n Objekte werden übertragen: 2RTT + Summe(Ti) ) alle Anfragen nach der ersten werden in der Übertragungszeit der Objekte "versteckt", außerdem nur 1x Slowstart. 
+			 Diskusion HTTP 1.1 - mehrere zu übertragende Objekte stark unterschiedlicher größe. Dadurch kann es sein dass, falls ein großes Objekt zu Beginn ansteht und übertragen wird,
+						werden nachstehende, kleinere Objekte sehr lange blockiert (s. Head of line blocking).
+				Wie geht es besser ?
+				--> Objekte in Stücke fester Größe zerteilen und diese reihum (Round-Robin) versenden (benötigt Fragmentierung, Flußkontrolle (Sender darf Empfänger nicht mit seinen Paketen überschwemmen))
+				--> nachteile von der Option "mehrere TCP verbindungen aufbauen": Verbindunge konkurrieren, verbraucht zu viele Ressourcen
+
+	HTTP 2 [RFC 7540]
+		Motivation: Webseites haben im Schnitt 50 eingebettete Objekte.
+		Historie: Google's SPDY
+		
+		Features: 
+			Binärformat (vs. Klartextformat HTTP 1 / 1.1) mit FRAMES, diese setzen sich wie folt zusammen:
+			- TYPE:  Daten, Header, später mehr..
+			- Length mind 2^14 Byte bis max (2^64) - 1 Byte
+			- Flags abhängig vom Typ (8 Bit)
+			- Stream identifier (31 Bit), dient dazu verschieden Objekte zu unterscheiden sowie die dazu gehörigen Kontrollnachrichten.
+			- Stream Multiplexing (bis zu 2^31 Streams): Frames verschiedener Streams abwechselnd übertragen.
+				
+			hierzu gibts ein Foto auf dem Handy! 
+			Streams haben verschieden Zustände:
+			- Idle (wird gerade nicht verwendet) -> sende H (Handshake) Paket -> Open // sende PP (Push promise / cache füllen) Paket -> reserved local, empfange PP Paket -> reserved remote
+			- reserved local -> sende H Paket -> half closed remote
+			- reserved remote -> empfange H Paket -> half closed local
+			- Open (wird jetzt zur Datenübertragung genutzt) -> Wenn daten gesendet oder empfangen werden bleiben wir hier -> Open // erhalte/sende ES(End of Stream) Paket -> half closed remote // Sende/erhalte R (Reset) Paket -> Closed
+			- half closed remote (gegenseite kann keine Daten mehr senden, wir allerdings schon) -> wenn Daten gesendet werden bleiben wir hier -> half closed remote // sende ES Paket -> half closed local
+			- half closed local (gegenseite kann noch datensenden und wir empfangen, wir senden allerdings nichts mehr) -> wenn Daten empfangen werden, bleiben wier hier -> half closed local // erhalte ES Paket -> closed
+			- Closed (Stream ist geschlossen)
+	
+			---> Head of line blocking gelöst !!
+					
+		Prioritäten + Abhängigkeiten:
+			Jeder Stream hat eine Priorität (Zahl)
+			Jeder Stream hat Abhängigkeiten von anderen Streams
+			Der Browser kann die Reihenfolge der Objekte festlegen
+			FRAME-Typ "PRIORITY"
+				- stream Id
+				- Priorität
+				- Liste anderer Stream-Id's, von denen dieser Stream abhängig ist.
+				
+		Flusskontrolle (vgl. TCP)
+			hier wird eine mehrfache Flusskontrolle pro Stream benötigt!
+				- Flusskontrollfenster pro Stream
+				- Flusskontrollfenster insgesamt (für alle Streams)
+			
+			spezielle Nachrichten: FRAME-Typ WINDOW_UPDATE
+				- stream id (0 Reserviert für "für alle Streams"
+				
+
+Verteilte Systeme 2:
+	!! 20% bonus durch übung !!
+	Labor ab 18.10
+	- research virtualisierung / hyperthreading
+	
+	
+	
+	
+Big Data Engineering:
+	
+	
+	
+	
+	
+	
+Projektarbeit Sikaku:
+	Features:
+		Main game
+			benutze <UniformGrid> für die Spielfläche
+			"Rectangle" objekt über selktierte Fläche legen
+			wenn neue spielfeldgröß ausgewählt wird, via event eine neues window erzeugen.
+			
+			
+		Startbildschirm der die Regeln kurz erklärt
+		Verschiedene Spielbrettgrößen (5,7,10,15 vorerst 7 als standard)
+		Logik Informationen anzeigen
+		Speicher-/Ladefunktion
+			standard per auswahl
+			automatisch wenn das fenster geschlossen wird bzw der computer heruntergefahren
+		Hinweis (nächstes kästchen zeigen)
+		Sprache ändern (Englisch/Deutsch/spanisch? )
+	Doku:
+		Grundlagen: 
+			- Sikaku
+			- MVVM
+			- WPF - XAML
+			
+		
