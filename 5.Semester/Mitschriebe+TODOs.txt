@@ -103,6 +103,8 @@ Big Data Engineering:
 	
 Projektarbeit Sikaku:
 	Features:
+		bzgl MVVM --> http://www.learnmvvm.com/index.html
+	
 		Main game
 			benutze <UniformGrid> für die Spielfläche
 			"Rectangle" objekt über selktierte Fläche legen

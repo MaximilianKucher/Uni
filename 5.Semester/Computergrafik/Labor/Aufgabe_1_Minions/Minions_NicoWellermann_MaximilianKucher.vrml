@@ -1,0 +1,1146 @@
+#VRML V2.0 utf8
+
+
+#***************************************
+#  Nico Wellermann & Maximilian Kucher
+#***************************************
+
+
+
+
+Background { skyColor [ 0 0.768627 1 ] }
+
+
+#************************************
+#**** Minion von Nico Wellermann ****
+#************************************
+
+# Body
+DEF Body Shape
+{
+	appearance Appearance
+	{
+		# material Material { diffuseColor 1 1 0 }
+		material Material { }
+		texture ImageTexture {
+			url "MinionBody.png"
+		}
+	}
+	geometry Cylinder
+	{
+		bottom FALSE
+		top FALSE
+		height 8
+		radius 2
+	}
+}
+
+
+# Head
+Transform
+{
+	translation 0 4 0
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 1 1 0 }
+			}
+			geometry Sphere { radius 1.98 }
+		}
+	]
+}
+
+# Bottom
+Transform
+{
+	translation 0 -4 0
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 0 0 1 }
+			}
+			geometry Sphere { radius 1.98 }
+		}
+	]
+}
+
+# Left Foot
+Transform
+{
+	translation -0.8 -6.5 0
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 1 1 0 }
+			}
+			geometry Cylinder { height 2 radius 0.5 }
+		}
+	]
+}
+
+# Right Foot
+Transform
+{
+	translation 0.8 -6.5 0
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 1 1 0 }
+			}
+			geometry Cylinder { height 2 radius 0.5 }
+		}
+	]
+}
+############BEGINN RIGHT SHOE##############
+# Right Shoe
+Transform
+{
+	rotation 1 0 0 1.57
+	translation 0.8 -7.5 0.1
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 0 0 0 }
+			}
+			geometry Cylinder { height 1.3 radius 0.6 }
+		}
+	]
+}
+# Right Shoe
+Transform
+{
+	translation 0.8 -7.5 0.78
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 0 0 0 }
+			}
+			geometry Sphere { radius 0.6 }
+		}
+	]
+}
+# Right Shoe
+Transform
+{
+	translation 0.8 -7.5 -0.53
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 0 0 0 }
+			}
+			geometry Sphere { radius 0.6 }
+		}
+	]
+}
+############END RIGHT SHOE##################
+############BEGINN LEFT SHOE##############
+# Left Shoe
+Transform
+{
+	rotation 1 0 0 1.57
+	translation -0.8 -7.5 0.1
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 0 0 0 }
+			}
+			geometry Cylinder { height 1.3 radius 0.6 }
+		}
+	]
+}
+# Left Shoe
+Transform
+{
+	translation -0.8 -7.5 0.78
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 0 0 0 }
+			}
+			geometry Sphere { radius 0.6 }
+		}
+	]
+}
+# Left Shoe
+Transform
+{
+	translation -0.8 -7.5 -0.53
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 0 0 0 }
+			}
+			geometry Sphere { radius 0.6 }
+		}
+	]
+}
+############END LEFT SHOE##################
+######## BEGIN RIGHT ARM ###########
+#Right Arm
+Transform
+{
+	rotation 0 0 1 0.5
+	translation 2.6 -1 0
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 1 1 0 }
+			}
+			geometry Cylinder { height 4 radius 0.3 }
+		}
+	]
+}
+# Rigth Hand
+Transform
+{	translation 3.65 -3 0
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 0 0 0 }
+			}
+			geometry Sphere
+			{
+				radius 0.5
+			}
+		}
+	]
+}
+# Rigth Hand Finger 1
+Transform
+{	translation 3.05 -3.1 0
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 0 0 0 }
+			}
+			geometry Sphere
+			{
+				radius 0.2
+			}
+		}
+	]
+}
+# Rigth Hand Finger 2
+Transform
+{	translation 3.4 -3.5 0
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 0 0 0 }
+			}
+			geometry Sphere
+			{
+				radius 0.2
+			}
+		}
+	]
+}
+# Rigth Hand Finger 3
+Transform
+{	translation 4 -3.4 0
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 0 0 0 }
+			}
+			geometry Sphere
+			{
+				radius 0.2
+			}
+		}
+	]
+}
+############ END RIGHT ARM #########
+######## BEGIN LEFT ARM ###########
+#Left Arm
+Transform
+{
+	rotation 0 0 -1 0.5
+	translation -2.6 -1 0
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 1 1 0 }
+			}
+			geometry Cylinder { height 4 radius 0.3 }
+		}
+	]
+}
+# Left Hand
+Transform
+{	translation -3.65 -3 0
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 0 0 0 }
+			}
+			geometry Sphere
+			{
+				radius 0.5
+			}
+		}
+	]
+}
+# Left Hand Finger 1
+Transform
+{	translation -3.05 -3.1 0
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 0 0 0 }
+			}
+			geometry Sphere
+			{
+				radius 0.2
+			}
+		}
+	]
+}
+# Left Hand Finger 2
+Transform
+{	translation -3.4 -3.5 0
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 0 0 0 }
+			}
+			geometry Sphere
+			{
+				radius 0.2
+			}
+		}
+	]
+}
+# Left Hand Finger 3
+Transform
+{	translation -4 -3.4 0
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 0 0 0 }
+			}
+			geometry Sphere
+			{
+				radius 0.2
+			}
+		}
+	]
+}
+############ END LEFT ARM #########
+
+
+
+# Left Eye Glass
+Transform
+{
+	rotation 1 0 0 1.57
+	translation -0.75 3 1.6	
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 0.768627 0.768627 0.768627 }
+			}
+			geometry Cylinder
+			{
+				height 1
+				radius 0.8
+			}
+		}
+	]
+}
+
+# Left Eye
+Transform
+{	translation -0.75 3 1.7	
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { }
+				texture ImageTexture {
+					url "MinionAuge.png"
+				}
+			}
+			geometry Sphere
+			{
+				radius 0.7
+			}
+		}
+	]
+}
+
+# Right Eye Glass
+Transform
+{
+	rotation 1 0 0 1.57
+	translation 0.75 3 1.6	
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 0.768627 0.768627 0.768627 }
+			}
+			geometry Cylinder
+			{
+				height 1
+				radius 0.75	
+			}
+		}
+	]
+}
+
+# Right Eye
+Transform
+{
+	translation 0.75 3 1.7	
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { }
+				texture ImageTexture {
+					url "MinionAuge.png"
+				}
+			}
+			geometry Sphere
+			{
+				radius 0.7
+			}
+		}
+	]
+}
+
+# Eye Band
+Transform
+{
+	translation 0 3 0	
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 0 0 0 }
+			}
+			geometry Cylinder
+			{
+				height 0.5
+				radius 2.1
+			}
+		}
+	]
+}
+
+# Hair 1
+Transform
+{
+	translation 0 5.8 0	
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 0 0 0 }
+			}
+			geometry Cone
+			{
+				height 2.2
+				bottomRadius 0.2
+				bottom FALSE
+			}
+		}
+	]
+}
+
+# Hair 2
+Transform
+{
+	rotation 0 0 1 0.4
+	translation -0.5 5.8 0	
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 0 0 0 }
+			}
+			geometry Cone
+			{
+				height 2.2
+				bottomRadius 0.2
+				bottom FALSE
+			}
+		}
+	]
+}
+
+# Hair 3
+Transform
+{
+	rotation 0 0 -1 0.4
+	translation 0.5 5.8 0	
+	children
+	[
+		Shape
+		{
+			appearance Appearance
+			{
+				material Material { diffuseColor 0 0 0 }
+			}
+			geometry Cone
+			{
+				height 2.2
+				bottomRadius 0.2
+				bottom FALSE
+			}
+		}
+	]
+}
+
+
+
+
+
+#**************************************
+#**** Minion von Maximilian Kucher ****
+#**************************************
+
+Transform
+{
+	translation 8 0 0
+	children
+	[
+		Group
+		{
+			children
+			[
+				#-------------
+				#The Main Body
+				#-------------
+				Shape
+				{
+					appearance Appearance
+					{
+						material Material
+						{
+							diffuseColor 1 1 0
+						}
+					}
+					geometry Cylinder
+					{
+						bottom FALSE
+						radius 1.5
+						height 2
+					}	
+				}
+				
+				
+						
+				Transform
+				{
+					translation 0 1 0
+					children
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor 1 1 0
+								}
+							}
+							geometry Sphere
+							{
+								radius 1.5
+							}
+						}
+					]
+				}
+				
+				Transform
+				{
+					translation 0 -1 0
+					children
+					[ 
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor 0 0.5 0.7
+								}
+							}
+							geometry Sphere
+							{
+								radius 1.492
+							}
+						} 
+					]
+				}
+				
+				
+				#----------------
+				#Accessoires Head
+				#----------------
+				DEF hair Shape
+				{
+					appearance Appearance
+					{
+						material Material
+						{
+							diffuseColor 0 0 0.5
+						}
+					}
+					geometry Cylinder
+					{
+						radius 0.02
+						height 0.8
+					}
+				}
+				
+				#right hair
+				Transform
+				{
+					rotation 0 0 1 1.2
+					translation 0.5 2.28 0.6
+					children
+					[
+						USE hair
+					]
+				}
+				
+				Transform
+				{
+					rotation 0 0 1 1.2
+					translation 0.5 2.38 0.3
+					children
+					[
+						USE hair
+					]
+				}
+				
+				Transform
+				{
+					rotation 0 0 1 1.2
+					translation 0.5 2.42 0
+					children
+					[
+						USE hair
+					]
+				}
+				
+				Transform
+				{
+					rotation 0 0 1 1.2
+					translation 0.5 2.38 -0.3
+					children
+					[
+						USE hair
+					]
+				}
+				
+				
+				#left hair
+				Transform
+				{
+					rotation 0 0 1 -1.2
+					translation -0.5 2.28 0.6
+					children
+					[
+						USE hair
+					]
+				}
+				
+				Transform
+				{
+					rotation 0 0 1 -1.2
+					translation -0.5 2.38 0.3
+					children
+					[
+						USE hair
+					]
+				}
+				
+				Transform
+				{
+					rotation 0 0 1 -1.2
+					translation -0.5 2.42 0
+					children
+					[
+						USE hair
+					]
+				}
+				
+				Transform
+				{
+					rotation 0 0 1 -1.2
+					translation -0.5 2.38 -0.3
+					children
+					[
+						USE hair
+					]
+				}
+				
+				Transform
+				{
+					translation -0.9 -0.15 1.20
+					children
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor 0 0 0
+								}
+							}
+							geometry IndexedLineSet
+							{
+								coord Coordinate
+								{
+									point
+									[
+										0.45  0.18   0.215,
+										0.6   0.12   0.28,
+										0.75  0.08    0.295,
+										0.9   0.06    0.3,
+										1.05  0.08    0.295,
+										1.2   0.12   0.28,
+										1.35  0.18   0.215
+				
+									]
+								}
+								coordIndex
+								[
+									0, 1, 2, 3, 4, 5, 6
+									0, 1, 2, 3, 4, 5, 6
+								]
+							}
+						}
+					]
+				}
+				
+				
+				#-------
+				#Clothes
+				#-------
+				#goggles/glasses
+				Group
+				{
+					children
+					[
+						Transform
+						{
+							translation 0 1 0
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor 0 0 0
+										}
+									}
+									geometry Cylinder
+									{
+										radius 1.51
+										height 0.3
+									}
+								}
+							]
+						}
+						
+						Transform
+						{
+							rotation 1 0 0 1.51
+							translation 0 1 1.37
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor 0.7 0.7 0.7
+										}
+									}
+									geometry Cylinder
+									{
+										radius 0.8
+										height 0.3
+									}
+								}
+								
+							]
+						}
+						
+						Transform
+						{
+							rotation 1 0 0 1.51
+							translation 0 1 1.3701
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										material Material
+										{
+											diffuseColor 1 1 1
+										}
+									}
+									geometry Cylinder
+									{
+										radius 0.64
+										height 0.3
+									}
+								}
+								
+							]
+						}
+						
+						Transform
+						{
+							rotation 1 0 0 1.51
+							translation 0 1 1.3702
+							children
+							[
+								Shape
+								{
+									appearance Appearance
+									{
+										texture ImageTexture
+										{
+											url "SauronsEye.jpg"		
+											repeatS TRUE
+											repeatT TRUE
+										}
+									}
+									geometry Cylinder
+									{
+										top TRUE
+										bottom FALSE
+										side FALSE
+										radius 0.61
+										height 0.3
+									}
+								}
+								
+							]
+						}
+					]
+				}
+				
+				#Trousers
+				Transform
+				{
+					translation -0.9 -1 1.22
+					children
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor 0 0.5 0.7
+								}
+							}
+							geometry IndexedFaceSet
+							{
+								coord Coordinate
+								{
+									point
+									[
+										0     0     0,
+										0     0.7  0,
+										0.15  0    0.075,
+										0.15  0.7  0.075,
+										0.3   0    0.156,
+										0.3   0.7  0.156,
+										0.45  0    0.215,
+										0.45  0.7  0.215,
+										0.6   0    0.28,
+										0.6   0.7  0.28,
+										0.75  0    0.295,
+										0.75  0.7  0.295,
+										0.9   0    0.3,
+										0.9   0.7  0.3,
+										1.05  0    0.295,
+										1.05  0.7  0.295,
+										1.2   0    0.28,
+										1.2   0.7  0.28,
+										1.35  0    0.215,
+										1.35  0.7  0.215,
+										1.5   0    0.156,
+										1.5   0.7  0.156,
+										1.65  0    0.075,
+										1.65  0.7  0.075,
+										1.8   0    0,
+										1.8   0.7  0
+									]
+								}
+								coordIndex
+								[
+									0, 2, 3, 1, -1,
+									2, 4, 5, 3, -1,
+									4, 6, 7, 5, -1,
+									6, 8, 9, 7, -1,
+									8, 10, 11, 9, -1,
+									10, 12, 13, 11, -1,
+									12, 14, 15, 13, -1,
+									14, 16, 17, 15, -1,
+									16, 18, 19, 17, -1,
+									18, 20, 21, 19, -1,
+									20, 22, 23, 21, -1,
+									22, 24, 25, 23
+								]
+							}
+						}
+					]
+				}
+				
+				#Gloves
+				Transform
+				{
+					rotation 0 0 1 0.5
+					translation 1.92 -1.6 0
+					children
+					[
+						DEF glove Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor 0.35 0.35 0.35
+								}
+							}
+							geometry Cylinder
+							{
+								radius 0.3
+								height 0.5
+							}
+						}
+					]
+				}
+				
+				Transform
+				{
+					rotation 0 0 1 -0.5
+					translation -1.92 -1.6 0
+					children
+					[
+						USE glove
+					]
+				}
+				
+				#Shoes
+				Transform
+				{
+					translation 0.65 -3 0.1
+					children
+					[
+						DEF shoe Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor 0.35 0.35 0.35
+								}
+							}
+							geometry Cylinder
+							{
+								radius 0.55
+								height 0.3
+							}
+						}
+					]
+				}
+				
+				Transform
+				{
+					translation -0.65 -3 0.1
+					children
+					[
+						USE shoe
+					]
+				}
+				
+				#Waist
+				Transform
+				{
+					translation 0 -0.35 0
+					children
+					[
+						Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor 0 0.5 0.7
+								}
+							}
+							geometry Cylinder
+							{
+								top FALSE
+								bottom FALSE
+								side TRUE
+								radius 1.502
+								height 0.15
+							}
+						}
+					]
+				}
+				
+				
+				#-----
+				#limbs
+				#-----
+				Transform
+				{
+					rotation 0 0 1 0.5
+					translation 1.6 -1 0
+					children
+					[
+						DEF arm Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor 1 1 0
+								}
+							}
+							geometry Cylinder
+							{
+								radius 0.2
+								height 1.5
+							}
+						}
+					]
+				}
+				
+				Transform
+				{
+					rotation 0 0 1 2.64
+					translation -1.6 -1 0
+					children
+					[
+						USE arm
+					]
+				}
+				
+				Transform
+				{
+					translation 0.65 -2 0
+					children
+					[
+						DEF leg Shape
+						{
+							appearance Appearance
+							{
+								material Material
+								{
+									diffuseColor 0 0.5 0.7
+								}
+							}
+							geometry Cylinder
+							{
+								radius 0.35
+							}
+						}
+					]
+				}
+				
+				Transform
+				{
+					translation -0.65 -2 0
+					children
+					[
+						USE leg
+					]
+				}
+			]
+		}
+	]
+}
