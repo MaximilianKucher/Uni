@@ -91,6 +91,18 @@ Verteilte Systeme 2:
 	Labor ab 18.10
 	- research virtualisierung / hyperthreading
 	
+	PYCharm shrotcuts:
+		alt+F7 - referenzen finden
+		strg+q - dokumentation einsehen
+		strg+b - zur deklaration
+		strg+f12 - navigieren
+		umschalt+f6 - rename
+		shift+click - close tab
+		strg+alt+v - extract variable
+		strg+d - zeile oder markierten block dublizieren
+		strg+p wenn cursor zw. klammern - liste mit parametern
+		
+	
 	
 	
 	
