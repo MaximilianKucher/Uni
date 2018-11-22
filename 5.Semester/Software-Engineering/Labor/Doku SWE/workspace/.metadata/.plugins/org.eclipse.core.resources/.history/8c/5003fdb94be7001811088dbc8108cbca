@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<view uin="V1hexuhjofi8duj-hfakjw">
+		<property name="$defaultDiagram" value="true"/>
+		<property name="$metaclass" value="ClassDiagram20"/>
+		<property name="visibility" value="public"/>
+		<reference referencedUin="design:view:::V-jr6xbajofjl2ci-8x8wrp">
+			<property name="bounds" value="635,7,327,185"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::V-b8dyjijofjlyr8-84jc9v">
+			<property name="bounds" value="205,75,333,137"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::V1hexuhjofjm9k4ikijlg">
+			<property name="bounds" value="56,75,146,60"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::Vam8ynkjofjmlwjm7gr8m">
+			<property name="bounds" value="220,154,178,73"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::V-b8dyjijofjnnpnnjdx1u">
+			<property name="bounds" value="424,75,165,105"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::V-b8dyjijofjnt43eiivvq">
+			<property name="bounds" value="424,154,213,89"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::Vam8ynkjofjs1w4eg74x">
+			<property name="bounds" value="41,154,178,73"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+	</view>
+</nodeSet>

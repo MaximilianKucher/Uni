@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<view uin="Vam8ynkjofjs1w4eg74x">
+		<property name="$metaclass" value="SequenceDiagram20"/>
+		<property name="$name" value="Sequence Diagram2"/>
+		<property name="$referencedInteractionUin" value="design:node:::-yrgd8ejofjs1w6-zd1m6u"/>
+		<property name="__options" value="option.nlayout.recursive=true"/>
+		<reference referencedUin="design:node:::-yrgd8ejofjs1w6-zd1m6u">
+			<property name="$shortcutReference" value="true"/>
+			<property name="bounds" value="5,5,871,751"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="design:node:::-y8nsowjopnu28y-ropv8g:-yrgd8ejofjs1w6-zd1m6u">
+				<property name="bounds" value="205,5,60,300"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="design:node:::-y8nsowjopnu5c242mcfn:-yrgd8ejofjs1w6-zd1m6u">
+				<property name="bounds" value="585,5,60,300"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+		</reference>
+	</view>
+	<link uin="ieje0rjofjs1wa-eso2rc">
+		<property name="$metaclass" value="SequenceDiagram20_LinkToInteraction"/>
+		<participant referencedUin="design:view:::Vam8ynkjofjs1w4eg74x" role="Client"></participant>
+		<participant referencedUin="design:node:::-yrgd8ejofjs1w6-zd1m6u" role="Supplier"></participant>
+	</link>
+</nodeSet>
